@@ -1,0 +1,21 @@
+{
+  "name": "davidbouhaben_personal_project_cv_eportofolio",
+  "version": "1.0.0",
+  "description": "My ePortofolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css -w --style compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darkheadbanger/DavidBouhaben_personal_project_CV_ePortofolio.git"
+  },
+  "author": "David Bouhaben",
+  "license": "ISC",
+  "browerslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Darkheadbanger/DavidBouhaben_personal_project_CV_ePortofolio/issues"
+  },
+  "homepage": "https://github.com/Darkheadbanger/DavidBouhaben_personal_project_CV_ePortofolio#readme"
+}

@@ -10,7 +10,7 @@
         "imagery btn";
     margin-bottom: $grid-gutter;
     &__heading {
-        grid-area: heading;
+        grid-area: heading; 
         color: $colour-white;
         @include heading-shadow;
         text-align: right;
