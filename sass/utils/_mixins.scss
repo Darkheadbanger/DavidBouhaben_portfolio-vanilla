@@ -41,24 +41,25 @@
 }
 
 // Breakpoints here
+// Utilisation ex: @include mobile-only { grid-template-columns: 1fr;}
 @mixin mobile-only {
   @media screen and (max-width: map-get($breakpoints, mobile)) {
     @content;
   }
 }
-
+// @include tablet-only { grid-template-columns: 1fr;}
 @mixin tablet-only {
   @media screen and (max-width: map-get($breakpoints, tablet)) {
     @content;
   }
 }
-
+// @include dekstop-only { grid-template-columns: 1fr;}
 @mixin dekstop-only {
   @media screen and (max-width: map-get($breakpoints, dekstop)) {
     @content;
   }
 }
-
+// @include LGdekstop-only { grid-template-columns: 1fr;}
 @mixin LGdekstop-only {
   @media screen and (max-width: map-get($breakpoints, LGdekstop)) {
     @content;
