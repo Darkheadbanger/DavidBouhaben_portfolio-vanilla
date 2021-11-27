@@ -13,13 +13,13 @@
         grid-area: heading; 
         color: $colour-white;
         @include heading-shadow;
-        text-align: right;
+        text-align: right; 
         padding-right: $grid-gutter;
     }
     &__imagery {
         grid-area: imagery;
     }
-    &__pic {
+    &__pic { 
         overflow:hidden;
         width: 80%;
         border-radius: 1000rem;
