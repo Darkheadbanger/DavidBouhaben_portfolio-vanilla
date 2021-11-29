@@ -1,7 +1,8 @@
 // Pour les ecrans
 $breakpoints: (
-  "mobile": 360px,
+  "mobile": 576px,
   "tablet": 768px,
-  "dekstop": 1366px,
-  "LGdekstop": 1920px,
+  "dekstop": 992px,
+  "LGdekstop": 1200px,
+  "XLdekstop": 1400px,
 ) !default;
