@@ -15,6 +15,6 @@ body {
   box-sizing: border-box;
   background: $colour-secondary;
   @include mobile-only {
-    background: $colour-invalid; 
+    background: $colour-background-mobile;
   }
 }
