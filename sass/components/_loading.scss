@@ -1,21 +1,43 @@
-.loading {
+.loading--circle {
   display: flex;
   justify-content: center;
 
+  .loading--box {
+    display: flex;
+    justify-content: center;
+  }
+  .loading--full-hight {
+    align-items: center;
+    position: fixed; /* or absolute */
+    top: 25%;
+    left: 45%;
+  }
+  .loading--box::before {
+    content: "";
+    width: 70px;
+    height: 70px;
+    border: 10px solid #6c51a4;
+    //   border-top-color: #2f435c;
+    border-radius: 25%;
+    transform: rotate(0.16turn);
+    animation: loading 1s ease infinite;
+    z-index: 99;
+  }
+}
+.loading--circle::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border: 10px solid #6c51a4;
+  border-top-color: #2f435c;
+  border-radius: 50%;
+  transform: rotate(0.16turn);
+  animation: loading 1s ease infinite;
+  z-index: 99;
 }
 .loading--full-hight {
   align-items: center;
   position: fixed; /* or absolute */
-  top: 25%;
-  left: 50%;
-}
-.loading::after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  border: 10px solid #6c51a4;
-  border-top-color: #2f435c;
-  border-radius: 25%;
-  transform: rotate(0.16turn);
-  animation: loading 1s ease infinite;
+  top: 25.5%;
+  left: 46.5%;
 }
