@@ -5,6 +5,13 @@
   .loading--box {
     display: flex;
     justify-content: center;
+    .percentage {
+      color: black;
+      font-size: medium;
+      font-weight: 900;
+      align-items: center;
+      position: absolute;
+    }
   }
   .loading--full-hight {
     align-items: center;
@@ -20,19 +27,19 @@
     //   border-top-color: #2f435c;
     border-radius: 25%;
     transform: rotate(0.16turn);
-    animation: loading 1s ease infinite;
+    animation: loading--spin 1s ease infinite;
     z-index: 99;
   }
 }
-.loading--circle::before {
+.loading--circle::after {
   content: "";
   width: 60px;
   height: 60px;
   border: 10px solid #6c51a4;
   border-top-color: #2f435c;
   border-radius: 50%;
-  transform: rotate(0.16turn);
-  animation: loading 1s ease infinite;
+  transform: rotate(1turn);
+  animation: loading--spin 0.3s ease infinite;
   z-index: 99;
 }
 .loading--full-hight {
