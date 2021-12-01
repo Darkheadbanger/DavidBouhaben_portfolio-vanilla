@@ -50,16 +50,19 @@ function updateProgress() {
   }
 }
 
+let elementLoadingBox = document.querySelector(".loading--box");
+let percentageDiv = document.createElement("div");
+percentageDiv.className = "percentage";
+let percentageText = document.createTextNode("%");
+percentageDiv.appendChild(percentageText);
+elementLoadingBox.appendChild(percentageDiv);
+
 let intervalObject = setInterval(() => {
-  let elementLoadingBox = document.querySelector("loading--box"),
-    percentageDiv = document.createElement("div"),
-    percentageClass = document.createTextNode("Percentage");
-  percentageDiv.className = "percentage";
   // Si le body different de undefined
-  if (elementLoadingBox != undefined) {
-    clearInterval(elementLoadingBox);
-    elementLoadingBox.appendChild(percentageClass);
-    document.elementLoadingBox.appendChild(percentageDiv);
-    updateProgress();
-  }
+  // if (elementLoadingBox != undefined) {
+  //   clearInterval(elementLoadingBox);
+  //   elementLoadingBox.appendChild(percentageClass);
+  //   document.elementLoadingBox.appendChild(percentageDiv);
+  //   updateProgress();
+  // }
 }, 50);
