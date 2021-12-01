@@ -49,20 +49,24 @@ function updateProgress() {
     setTimeout(updateProgress, animationInterval);
   }
 }
-
-let elementLoadingBox = document.querySelector(".loading--box");
-let percentageDiv = document.createElement("div");
-percentageDiv.className = "percentage";
-let percentageText = document.createTextNode("%");
-percentageDiv.appendChild(percentageText);
-elementLoadingBox.appendChild(percentageDiv);
+// let elementLoadingBox = document.querySelector(".loading--box");
+// let percentageDiv = document.createElement("div");
+// percentageDiv.className = "percentage";
+// let percentageText = document.createTextNode("0%");
+// percentageDiv.appendChild(percentageText);
+// elementLoadingBox.appendChild(percentageDiv);
 
 let intervalObject = setInterval(() => {
   // Si le body different de undefined
-  // if (elementLoadingBox != undefined) {
-  //   clearInterval(elementLoadingBox);
-  //   elementLoadingBox.appendChild(percentageClass);
-  //   document.elementLoadingBox.appendChild(percentageDiv);
-  //   updateProgress();
-  // }
+  let elementBody = document.querySelector("body");
+  let elementLoadingCircle = elementBody.querySelector(".loading--circle");
+  let elementLoadingBox = elementLoadingCircle.querySelector(".loading--box");
+  let percentageDiv = document.createElement("div");
+  percentageDiv.className = "percentage";
+  percentageDiv.textContent = "0%";
+  if (elementBody != undefined) {
+    clearInterval(intervalObject);
+    elementLoadingBox.appendChild(percentageDiv);
+    updateProgress();
+  }
 }, 50);
