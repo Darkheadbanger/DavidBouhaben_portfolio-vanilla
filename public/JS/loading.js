@@ -73,6 +73,6 @@ let intervalObject = setInterval(() => {
   if (elementBody != undefined) {
     clearInterval(intervalObject);
     elementLoadingBox.appendChild(percentageDiv);
-    updateProgress();
+    // updateProgress();
   }
 }, 50);

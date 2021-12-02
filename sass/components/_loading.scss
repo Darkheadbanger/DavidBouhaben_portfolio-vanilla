@@ -6,11 +6,18 @@
     display: flex;
     justify-content: center;
     .percentage {
-      color: black;
+      color: white;
       font-size: medium;
       font-weight: 900;
       align-items: center;
       position: absolute;
+      @include mobile-only {
+        color: black;
+        font-size: medium;
+        font-weight: 900;
+        align-items: center;
+        position: absolute;
+      }
     }
   }
   .loading--full-hight {
@@ -18,6 +25,10 @@
     position: fixed; /* or absolute */
     top: 25%;
     left: 45%;
+    @include mobile-only {
+      top: 25%;
+      left: 45%;
+    }
   }
   .loading--box::before {
     content: "";
@@ -29,6 +40,11 @@
     transform: rotate(0.16turn);
     animation: loading--spin 1s ease infinite;
     z-index: 99;
+    @include mobile-only {
+      width: 70px;
+      height: 70px;
+      border-radius: 25%;
+    }
   }
 }
 .loading--circle::after {
@@ -41,10 +57,19 @@
   transform: rotate(1turn);
   animation: loading--spin 0.3s ease infinite;
   z-index: 99;
+  @include mobile-only {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
 }
 .loading--full-hight {
   align-items: center;
   position: fixed; /* or absolute */
   top: 25.5%;
   left: 46.5%;
+  @include mobile-only {
+    top: 25.5%;
+    left: 46.5%;
+  }
 }
