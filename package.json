@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Darkheadbanger/DavidBouhaben_personal_project_CV_ePortofolio/issues"
   },
-  "homepage": "https://github.com/Darkheadbanger/DavidBouhaben_personal_project_CV_ePortofolio#readme"
+  "homepage": "https://github.com/Darkheadbanger/DavidBouhaben_personal_project_CV_ePortofolio#readme",
+  "devDependencies": {
+    "rewire": "^5.0.0"
+  }
 }
