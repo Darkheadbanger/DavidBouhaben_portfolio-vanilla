@@ -1,4 +1,5 @@
 // Creation des variables
+// Ca ne fonctionne pas, il faut ajouter updateProgress en bas
 let pageState = null;
 let ProgressPercentage = null;
 let animationInterval = 33;
@@ -71,8 +72,10 @@ let intervalObject = setInterval(() => {
   percentageDiv.className = "percentage";
   percentageDiv.textContent = "0%";
   if (elementBody != undefined) {
-    clearInterval(intervalObject);
-    elementLoadingBox.appendChild(percentageDiv);
-    // updateProgress();
+    setTimeout(() => {
+      clearInterval(intervalObject);
+      elementLoadingBox.appendChild(percentageDiv);
+      updateProgress();
+    });
   }
 }, 50);
