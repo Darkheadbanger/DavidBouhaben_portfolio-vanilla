@@ -24,7 +24,7 @@
   }
 }
 
-@mixin hamburgerBtn {
+@mixin hamburgerBtnFalse {
   padding: $grid-gutter;
   position: relative;
   background: transparent;
@@ -47,9 +47,19 @@
   .bar-bot {
     margin-bottom: 0;
   }
+}
 
-  .openned{
-    
+@mixin hamburgerBtnTrue {
+  .bar-top {
+    transform: rotate(45deg);
+    transform-origin: 2px 3px;
+  }
+  .bar-mid {
+    opacity: 0;
+  }
+  .bar-bot {
+    transform: rotate(-45deg);
+    transform-origin: 0px 3px;
   }
 }
 

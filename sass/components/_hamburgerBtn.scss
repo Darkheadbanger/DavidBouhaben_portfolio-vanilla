@@ -2,5 +2,8 @@
   @include mobile-only {
     visibility: visible;
   }
-  @include hamburgerBtn;
+  @include hamburgerBtnFalse;
+}
+.opened {
+  @include hamburgerBtnTrue;
 }

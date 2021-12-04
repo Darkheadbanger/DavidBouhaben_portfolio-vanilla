@@ -1,9 +1,11 @@
+// C'st une fonctione qui appelle lui même
 (() => {
-  let hamburgerToggle = document.querySelector(".hamburger-toggle");
+  // Je dois pointer vers la classe hamburger
+  let hamburgerBtn = document.querySelector(".hamburger-toggle");
 
-  //   Creation de addeventlistener en cas de clique
-  hamburgerToggle.addEventListener("click", function (event) {
-    let open = this.classList.toggle("openned");
-    console.log(open);
+  // Je dois créer un evenement cloique qui va communiuqer avec la classe hamburger toggle pour ensuite lui dire d'exectuer le css pour qu'il deviens X
+  hamburgerBtn.addEventListener("click", function () {
+    let open = this.classList.toggle("opened");
+    console.dir(open);
   });
 })();
