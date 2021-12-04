@@ -24,19 +24,32 @@
   }
 }
 
-@mixin btn {
+@mixin hamburgerBtn {
   padding: $grid-gutter;
-  @include border;
-  color: $colour-primary;
-  background: $colour-secondary;
+  position: relative;
+  background: transparent;
+  border: 1px solid transparent;
+  left: 40%;
   cursor: pointer;
-  &:hover {
-    background: $colour-primary;
-    color: $colour-accent;
+  &:focus {
+    outline-width: 0;
   }
-  &--full-width {
-    width: 100%;
-    margin: 0 auto;
+  [class*="bar-"] {
+    background: #3bc1b0;
+    display: block;
+    transform: rotate(0deg);
+    transition: 0.2s ease all;
+    border-radius: 12px;
+    height: 5px;
+    width: 50px;
+    margin-bottom: 12px;
+  }
+  .bar-bot {
+    margin-bottom: 0;
+  }
+
+  .openned{
+    
   }
 }
 

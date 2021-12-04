@@ -16,18 +16,26 @@
       <div class="loading--box loading--full-hight"></div>
     </div>
     <div class="wrapper">
-      <header class="header">
-        <div id="home" class="wellcome">
-          <h1 class="header__logo"></h1>
-          <nav class="nav">
-            <ul>
-              <li class="nav__link nav__link--active"></li>
-              <li class="nav__link"><a href="/about.html"></a></li>
-              <li class="nav__link"><a href="/contact.html"></a></li>
-            </ul>
-          </nav>
+      <div class="wrapper-logo">
+        <header class="header">
+          <div id="home" class="wellcome">
+            <h1 class="header__logo">1</h1>
+            <button class="hamburger-toggle">
+              <span class="bar-top"></span>
+              <span class="bar-mid"></span>
+              <span class="bar-bot"></span>
+            </button>
+            <nav class="nav">
+              <ul>
+                <li class="nav__link nav__link--active">Home</li>
+                <li class="nav__link"><a href="/about.html">About</a></li>
+                <li class="nav__link"><a href="/contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
         </div>
-      </header>
+      </div>
 
       <!-- <section class="quote"> -->
       <!-- "We are the <strong>music makers,</strong>
@@ -113,5 +121,6 @@
       <!-- </main> -->
     </div>
     <script src="./public/JS/loading.js"></script>
+    <script src="./public/JS/hamburger.js"></script>
   </body>
 </html>
