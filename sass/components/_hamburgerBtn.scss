@@ -1,5 +1,5 @@
 .hamburger-toggle {
-  @include mobile-only {
+  @include media(mobile) {
     visibility: visible;
   }
   @include hamburgerBtnFalse;

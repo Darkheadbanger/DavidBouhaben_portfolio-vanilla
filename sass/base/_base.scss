@@ -14,7 +14,7 @@ html {
 body {
   box-sizing: border-box;
   background: $colour-secondary;
-  @include mobile-only {
+  @include media (mobile ) {
     background: $colour-background-mobile;
   }
 }

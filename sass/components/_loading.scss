@@ -11,7 +11,7 @@
       font-weight: 900;
       align-items: center;
       position: absolute;
-      @include mobile-only {
+      @include media(mobile) {
         color: black;
         font-size: medium;
         font-weight: 900;
@@ -25,7 +25,7 @@
     position: fixed; /* or absolute */
     top: 25%;
     left: 45%;
-    @include mobile-only {
+    @include media(mobile) {
       top: 25%;
       left: 45%;
     }
@@ -40,7 +40,7 @@
     transform: rotate(0.16turn);
     animation: loading--spin 1s ease infinite;
     z-index: 99;
-    @include mobile-only {
+    @include media(mobile) {
       width: 70px;
       height: 70px;
       border-radius: 25%;
@@ -57,7 +57,7 @@
   transform: rotate(1turn);
   animation: loading--spin 0.3s ease infinite;
   z-index: 99;
-  @include mobile-only {
+  @include media(mobile) {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -68,7 +68,7 @@
   position: fixed; /* or absolute */
   top: 25.5%;
   left: 46.5%;
-  @include mobile-only {
+  @include media(mobile) {
     top: 25.5%;
     left: 46.5%;
   }
