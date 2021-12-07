@@ -1,9 +1,12 @@
-.hamburger-toggle {
-  @include media(mobile) {
-    visibility: visible;
+.container-hamburger {
+  padding: 0;
+  .hamburger-toggle {
+    @include media(mobile) {
+      visibility: visible;
+    }
+    @include hamburgerBtnFalse;
   }
-  @include hamburgerBtnFalse;
-}
-.opened {
-  @include hamburgerBtnTrue;
+  .opened {
+    @include hamburgerBtnTrue;
+  }
 }

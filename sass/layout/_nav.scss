@@ -1,5 +1,5 @@
 .nav {
   @include media(mobile) {
-    visibility: hidden;
+    display: none;
   }
 }
