@@ -2,7 +2,7 @@
   @include media(mobile) {
     background-color: red;
     height: 100%;
-    position: fixed;
+    position: fixed; 
     z-index: -99;
     width: 100%;
     display: block;
