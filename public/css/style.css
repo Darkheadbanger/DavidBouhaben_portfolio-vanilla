@@ -63,7 +63,7 @@ body {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Verdana, "Geneva", Tahoma, sans-serif;
   color: #15dea5;
   font-size: 2rem;
   font-weight: 100;
@@ -71,20 +71,20 @@ body {
 }
 
 h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: Verdana, "Geneva", Tahoma, sans-serif;
   font-weight: 900;
   font-size: 5rem;
   font-style: italic;
 }
 
 textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: Verdana, "Geneva", Tahoma, sans-serif;
   font-weight: 100;
   font-size: 2rem;
 }
 
 button {
-  font-family: "Roboto", sans-serif;
+  font-family: Verdana, "Geneva", Tahoma, sans-serif;
   font-weight: 900;
   font-style: italic;
   font-size: 2.75rem;
@@ -267,6 +267,17 @@ button {
     width: 100%;
     animation: nav--open 1s ease-in-out 0s 1 normal forwards;
   }
+}
+.nav-open .nav {
+  display: block;
+  padding: 7em 0px 0px 8%;
+}
+.nav-open .nav ul li {
+  list-style: none;
+}
+.nav-open .nav ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 @media (max-width: 576px) {
