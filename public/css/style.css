@@ -274,6 +274,7 @@ button {
 }
 .nav-open .nav ul li {
   list-style: none;
+  margin: 5px 0 0 0;
 }
 .nav-open .nav ul li a {
   color: white;
