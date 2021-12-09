@@ -16,6 +16,26 @@
     opacity: 0;
   }
 }
+@keyframes nav--open {
+  100% {
+    left: 0;
+    z-index: 99;
+  }
+  0% {
+    left: 100%;
+    z-index: 99;
+  }
+}
+@keyframes nav--close {
+  100% {
+    left: 100%;
+    z-index: 99;
+  }
+  0% {
+    left: 0%;
+    z-index: 99;
+  }
+}
 *,
 *::after,
 *::before {
@@ -227,13 +247,12 @@ button {
 }
 
 @media (max-width: 576px) {
-  .menu-open-mobile {
+  .nav-open {
     background-color: red;
     height: 100%;
     position: fixed;
-    z-index: -99;
     width: 100%;
-    display: block;
+    animation: nav--open 1s ease-in-out 0s 1 normal forwards;
   }
 }
 

@@ -1,4 +1,4 @@
-// C'st une fonctione qui appelle lui même
+// C'st une fonctione qui appelle lui même, function ecursive
 (() => {
   // Je dois pointer vers la classe hamburger
   let hamburgerBtn = document.querySelector(".hamburger-toggle");

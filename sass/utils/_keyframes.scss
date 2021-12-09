@@ -1,3 +1,4 @@
+// Animation pour loading spinner
 @keyframes loading--spin {
   from {
     transform: rotate(0deg);
@@ -6,7 +7,7 @@
     transform: rotate(360deg);
   }
 }
-
+// Spinner se ferme
 @keyframes loading--exit {
   from {
     transform: scale(1);
@@ -15,5 +16,27 @@
   to {
     transform: scale(0);
     opacity: 0;
+  }
+}
+// Animation pour ballayage de nav pour ouvrir le nav
+@keyframes nav--open {
+  100% {
+    left: 0;
+    z-index: 99;
+  }
+  0% {
+    left: 100%;
+    z-index: 99;
+  }
+}
+// Animation pour ballayage de nav pour fermer le nav
+@keyframes nav--close {
+  100% {
+    left: 100%;
+    z-index: 99;
+  }
+  0% {
+    left: 0%;
+    z-index: 99;
   }
 }

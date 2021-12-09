@@ -15,6 +15,7 @@ window.document.addEventListener(
   false
 );
 
+// Progress du pourcentage
 function updateProgress() {
   if (pageState == "complete" && ProgressPercentage != null) {
     document.querySelector(".percentage").textContent = "100%";
