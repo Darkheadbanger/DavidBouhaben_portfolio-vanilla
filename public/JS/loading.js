@@ -26,6 +26,7 @@ function updateProgress() {
     }, 700);
     setTimeout(() => {
       document.querySelector(".wrapper").style.display = "block";
+      document.getElementById("navId").style.display = "block";
     }, 700);
   } else {
     if (ProgressPercentage == null) {

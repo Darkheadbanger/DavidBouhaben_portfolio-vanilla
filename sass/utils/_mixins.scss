@@ -70,3 +70,12 @@
     }
   }
 }
+
+// Le nav pour open et close
+
+@mixin navOpenClose {
+  background-color: red;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
