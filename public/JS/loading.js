@@ -25,7 +25,7 @@ function updateProgress() {
       document.querySelector(".loading--circle").style.display = "none";
     }, 700);
     setTimeout(() => {
-      document.querySelector(".wrapper").style.display = "";
+      document.querySelector(".wrapper").style.display = "block";
     }, 700);
   } else {
     if (ProgressPercentage == null) {

@@ -3,6 +3,7 @@
   .hamburger-toggle {
     @include media(mobile) {
       visibility: visible;
+      z-index: 99;
     }
     @include hamburgerBtnFalse;
   }

@@ -19,21 +19,21 @@
 @keyframes nav--open {
   100% {
     left: 0;
-    z-index: 99;
+    z-index: 1;
   }
   0% {
     left: 100%;
-    z-index: 99;
+    z-index: 1;
   }
 }
 @keyframes nav--close {
   100% {
     left: 100%;
-    z-index: 99;
+    z-index: 1;
   }
   0% {
     left: 0%;
-    z-index: 99;
+    z-index: 1;
   }
 }
 *,
@@ -56,6 +56,10 @@ body {
   body {
     background: white;
   }
+}
+
+.wrapper {
+  display: none;
 }
 
 body {
@@ -98,6 +102,7 @@ button {
 @media (max-width: 576px) {
   .container-hamburger .hamburger-toggle {
     visibility: visible;
+    z-index: 99;
   }
 }
 .container-hamburger .hamburger-toggle:focus {
@@ -241,9 +246,13 @@ button {
   height: 200px;
   text-align: center;
 }
+.wrapper-logo .header .header__logo {
+  z-index: 99;
+}
 .wrapper-logo .header img {
   height: 100%;
   width: 100px;
+  z-index: 99;
 }
 
 @media (max-width: 576px) {
@@ -254,6 +263,11 @@ button {
     width: 100%;
     animation: nav--open 1s ease-in-out 0s 1 normal forwards;
   }
+}
+
+.nav-close {
+  width: 0;
+  animation: nav--close 1s ease-in-out 0s 1 normal forwards;
 }
 
 @media (max-width: 576px) {

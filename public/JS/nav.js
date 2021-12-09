@@ -4,6 +4,7 @@
 
   function displayNav() {
     let navDisplay = document.getElementById("navId");
-    navDisplay.classList.add("nav-open");
+    navDisplay.classList.toggle("nav-open");
+    navDisplay.classList.toggle("nav-close");
   }
 })();

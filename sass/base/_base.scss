@@ -14,7 +14,11 @@ html {
 body {
   box-sizing: border-box;
   background: $colour-secondary;
-  @include media (mobile ) {
+  @include media(mobile) {
     background: $colour-background-mobile;
   }
+}
+
+.wrapper {
+  display: none;
 }

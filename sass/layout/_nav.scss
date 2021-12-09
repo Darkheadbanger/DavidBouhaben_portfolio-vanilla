@@ -2,14 +2,17 @@
   @include media(mobile) {
     background-color: red;
     height: 100%;
-    position: fixed; 
+    position: fixed;
     width: 100%;
     animation: nav--open 1s ease-in-out 0s 1 normal forwards;
   }
+}
+.nav-close {
+  width: 0;
+  animation: nav--close 1s ease-in-out 0s 1 normal forwards;
 }
 .nav {
   @include media(mobile) {
     display: none;
   }
 }
-
