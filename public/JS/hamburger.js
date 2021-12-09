@@ -7,5 +7,6 @@
   hamburgerBtn.addEventListener("click", function () {
     let open = this.classList.toggle("opened");
     console.dir(open);
-  });
+  }); 
 })();
+  
