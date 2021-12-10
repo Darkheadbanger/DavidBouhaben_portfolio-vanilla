@@ -267,18 +267,18 @@ button {
     width: 100%;
     animation: nav--open 1s ease-in-out 0s 1 normal forwards;
   }
-}
-.nav-open .nav {
-  display: block;
-  padding: 7em 0px 0px 8%;
-}
-.nav-open .nav ul li {
-  list-style: none;
-  margin: 5px 0 0 0;
-}
-.nav-open .nav ul li a {
-  color: white;
-  text-decoration: none;
+  .nav-open .nav {
+    display: block;
+    padding: 7em 0px 0px 8%;
+  }
+  .nav-open .nav ul li {
+    list-style: none;
+    margin: 5px 0 0 0;
+  }
+  .nav-open .nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 576px) {
@@ -288,6 +288,18 @@ button {
     position: fixed;
     width: 100%;
     animation: nav--close 1s ease-in-out 0s 1 normal forwards;
+  }
+  .nav-close .nav {
+    display: block;
+    padding: 7em 0px 0px 8%;
+  }
+  .nav-close .nav ul li {
+    list-style: none;
+    margin: 5px 0 0 0;
+  }
+  .nav-close .nav ul li a {
+    color: white;
+    text-decoration: none;
   }
 }
 
