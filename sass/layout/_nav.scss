@@ -18,3 +18,10 @@
     display: none;
   }
 }
+
+.nav-animation {
+  @include media(mobile) {
+    @include navOpenClose;
+    animation: menu 5s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal forwards;
+  }
+}
