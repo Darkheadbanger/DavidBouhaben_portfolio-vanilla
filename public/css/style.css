@@ -269,7 +269,14 @@ button {
   }
   .nav-open .nav {
     display: block;
-    padding: 7em 0px 0px 8%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-open .nav ul {
+    display: inline-block;
   }
   .nav-open .nav ul li {
     list-style: none;
@@ -291,7 +298,14 @@ button {
   }
   .nav-close .nav {
     display: block;
-    padding: 7em 0px 0px 8%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-close .nav ul {
+    display: inline-block;
   }
   .nav-close .nav ul li {
     list-style: none;
