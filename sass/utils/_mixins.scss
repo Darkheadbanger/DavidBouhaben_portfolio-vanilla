@@ -74,13 +74,12 @@
 // Le nav pour open et close
 
 @mixin navOpenClose {
-  background-color: red;
+  background-color: #fffaf1 !important;
   height: 100%;
   position: fixed;
   width: 100%;
   .nav {
     display: block;
-    // padding: 7em 0px 0px 8%;
     position: absolute;
     top: 20%;
     left: 25%;
@@ -91,7 +90,7 @@
         list-style: none;
         margin: 5px 0 0 0;
         a {
-          color: white;
+          color: $colour-text-light !important;
           text-decoration: none;
         }
       }

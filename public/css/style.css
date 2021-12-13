@@ -275,7 +275,7 @@ button {
 
 @media (max-width: 576px) {
   .nav-open {
-    background-color: red;
+    background-color: #fffaf1 !important;
     height: 100%;
     position: fixed;
     width: 100%;
@@ -296,14 +296,14 @@ button {
     margin: 5px 0 0 0;
   }
   .nav-open .nav ul li a {
-    color: white;
+    color: #362852 !important;
     text-decoration: none;
   }
 }
 
 @media (max-width: 576px) {
   .nav-close {
-    background-color: red;
+    background-color: #fffaf1 !important;
     height: 100%;
     position: fixed;
     width: 100%;
@@ -324,7 +324,7 @@ button {
     margin: 5px 0 0 0;
   }
   .nav-close .nav ul li a {
-    color: white;
+    color: #362852 !important;
     text-decoration: none;
   }
 }
@@ -337,7 +337,7 @@ button {
 
 @media (max-width: 576px) {
   .nav-animation {
-    background-color: red;
+    background-color: #fffaf1 !important;
     height: 100%;
     position: fixed;
     width: 100%;
@@ -358,7 +358,7 @@ button {
     margin: 5px 0 0 0;
   }
   .nav-animation .nav ul li a {
-    color: white;
+    color: #362852 !important;
     text-decoration: none;
   }
 }
