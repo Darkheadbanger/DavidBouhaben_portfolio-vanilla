@@ -341,7 +341,7 @@ button {
     height: 100%;
     position: fixed;
     width: 100%;
-    animation: menu 1.8s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal forwards;
+    animation: menu 1.9s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal forwards;
   }
   .nav-animation .nav {
     display: block;
