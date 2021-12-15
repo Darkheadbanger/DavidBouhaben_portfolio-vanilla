@@ -78,6 +78,9 @@
   height: 100%;
   position: fixed;
   width: 100%;
+}
+
+@mixin navLinkDesign {
   .nav {
     display: block;
     position: absolute;
@@ -87,19 +90,20 @@
     ul {
       display: inline-block;
       li {
-        border-bottom: 1px solid $li-border-bottom;
+        border-bottom: 1px solid $coulour-li-border-bottom;
         padding: 20px 0;
         list-style: none;
         cursor: pointer;
         &:first-child {
-          background-color: $bacground-link-active;
+          background-color: $coulour-bacground-link-active;
           border-radius: 5%;
         }
         &:last-child {
           border-bottom: 0;
         }
-        &:nth-last-child(2) {
+        &:nth-last-child(3) {
           border-bottom: 0;
+          background-color: $coulour-lang;
         }
         .nav__link {
           color: $colour-text-light;
@@ -110,5 +114,13 @@
         }
       }
     }
+  }
+}
+
+@mixin drapeaulangue {
+  img {
+    width: 6%;
+    height: auto;
+    margin: 0px -2px -5px 0px;
   }
 }

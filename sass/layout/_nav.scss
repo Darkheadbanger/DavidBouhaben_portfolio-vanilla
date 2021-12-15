@@ -10,6 +10,8 @@
   @include media(mobile) {
     @include navOpenClose;
     animation: nav--open 1s ease-in-out 0s 1 normal forwards;
+    @include navLinkDesign;
+    @include drapeaulangue;
   }
 }
 .nav-close {
