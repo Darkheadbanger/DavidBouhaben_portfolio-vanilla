@@ -5,6 +5,11 @@
 @import "./utils/extensions";
 @import "./utils/keyframes";
 
+@import "./vendors/scss/fontawesome.scss";
+@import "./vendors/scss/solid.scss";
+@import "./vendors/scss/regular.scss";
+@import "./vendors/scss/brands.scss";
+
 @import "./base/base";
 @import "./base/typography";
 
