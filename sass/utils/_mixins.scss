@@ -108,6 +108,7 @@
         .nav__link {
           color: $colour-text-light;
           text-decoration: none;
+          margin: 0 0 0 0;
           &--active {
             color: $colour-text-active;
           }
@@ -121,6 +122,6 @@
   img {
     width: 6%;
     height: auto;
-    margin: 0px -2px -5px 0px;
+    margin: 0px 6px -5px 0px;
   }
 }
