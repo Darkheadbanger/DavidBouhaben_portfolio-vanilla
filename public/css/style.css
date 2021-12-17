@@ -9152,6 +9152,12 @@ button {
     display: none;
   }
 }
+.nav .darkmode {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 @media (max-width: 576px) {
   .nav-open {
@@ -9171,15 +9177,15 @@ button {
   .nav-open .nav ul {
     display: inline-block;
   }
+  .nav-open .nav ul .li:first-child {
+    background-color: #0078d4;
+    border-radius: 5%;
+  }
   .nav-open .nav ul li {
     border-bottom: 1px solid #7a7a7a;
     padding: 20px 0;
     list-style: none;
     cursor: pointer;
-  }
-  .nav-open .nav ul li:first-child {
-    background-color: #0078d4;
-    border-radius: 5%;
   }
   .nav-open .nav ul li:last-child {
     border-bottom: 0;

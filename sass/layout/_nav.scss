@@ -5,6 +5,12 @@
   @include media(mobile) {
     display: none;
   }
+  .darkmode {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .nav-open {
   @include media(mobile) {
@@ -12,7 +18,7 @@
     animation: nav--open 1s ease-in-out 0s 1 normal forwards;
     @include navLinkDesign;
     @include drapeaulangue;
-    .fa-circle-half-stroke{
+    .fa-circle-half-stroke {
       color: black;
       margin: 0 5px 0px 0px;
     }

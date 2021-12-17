@@ -89,15 +89,17 @@
     text-align: center;
     ul {
       display: inline-block;
+      .li {
+        &:first-child {
+          background-color: $coulour-bacground-link-active;
+          border-radius: 5%;
+        }
+      }
       li {
         border-bottom: 1px solid $coulour-li-border-bottom;
         padding: 20px 0;
         list-style: none;
         cursor: pointer;
-        &:first-child {
-          background-color: $coulour-bacground-link-active;
-          border-radius: 5%;
-        }
         &:last-child {
           border-bottom: 0;
         }
