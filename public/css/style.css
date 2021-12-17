@@ -9157,7 +9157,25 @@ button {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  margin: 0 0 15px 0;
+}
+.nav .darkmode__police {
+  font-size: medium;
+}
+.nav .darkmode .toggle {
+  display: none;
+}
+.nav .darkmode .toggleBtn {
+  border: 3px solid #9e9191;
+  border-radius: 16px;
+  align-self: center;
+  cursor: pointer;
+  display: block;
+  width: 70px;
+  height: 30px;
+  outline: 0;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
 }
 
 @media (max-width: 576px) {
@@ -9184,9 +9202,11 @@ button {
   }
   .nav-open .nav ul li {
     border-bottom: 1px solid #7a7a7a;
-    padding: 20px 0;
+    padding: 20px;
+    width: 100%;
     list-style: none;
     cursor: pointer;
+    overflow: hidden;
   }
   .nav-open .nav ul li:last-child {
     border-bottom: 0;
@@ -9202,7 +9222,6 @@ button {
   .nav-open .nav ul li .nav__link {
     color: #3bc1b0;
     text-decoration: none;
-    margin: 0 0 0 0;
   }
   .nav-open .nav ul li .nav__link--active {
     color: white;
@@ -9242,9 +9261,11 @@ button {
   }
   .nav-close .nav ul li {
     border-bottom: 1px solid #7a7a7a;
-    padding: 20px 0;
+    padding: 20px;
+    width: 100%;
     list-style: none;
     cursor: pointer;
+    overflow: hidden;
   }
   .nav-close .nav ul li:last-child {
     border-bottom: 0;
@@ -9260,7 +9281,6 @@ button {
   .nav-close .nav ul li .nav__link {
     color: #3bc1b0;
     text-decoration: none;
-    margin: 0 0 0 0;
   }
   .nav-close .nav ul li .nav__link--active {
     color: white;
@@ -9291,9 +9311,11 @@ button {
   }
   .nav-animation .nav ul li {
     border-bottom: 1px solid #7a7a7a;
-    padding: 20px 0;
+    padding: 20px;
+    width: 100%;
     list-style: none;
     cursor: pointer;
+    overflow: hidden;
   }
   .nav-animation .nav ul li:last-child {
     border-bottom: 0;
@@ -9309,7 +9331,6 @@ button {
   .nav-animation .nav ul li .nav__link {
     color: #3bc1b0;
     text-decoration: none;
-    margin: 0 0 0 0;
   }
   .nav-animation .nav ul li .nav__link--active {
     color: white;
