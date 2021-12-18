@@ -9177,6 +9177,18 @@ button {
   transition: all 0.2s ease-in-out;
   user-select: none;
 }
+.nav .darkmode .toggleBtn::after {
+  left: 49%;
+  background-color: #9e9191;
+  content: "";
+  border-radius: 16px;
+  width: 50%;
+  overflow: hidden;
+  height: 93%;
+  position: relative;
+  display: block;
+  margin: 1px 0 0 0;
+}
 
 @media (max-width: 576px) {
   .nav-open {
