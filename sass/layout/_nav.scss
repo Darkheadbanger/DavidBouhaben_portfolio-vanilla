@@ -6,42 +6,6 @@
     display: none;
     margin: 0 0 0 -10px;
   }
-  .darkmode {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 0 15px 0;
-    &__police {
-      font-size: medium;
-    }
-    .toggle {
-      display: none;
-    }
-    .toggleBtn {
-      border: 3px solid #9e9191;
-      border-radius: 16px;
-      align-self: center;
-      cursor: pointer;
-      display: block;
-      width: 70px;
-      height: 30px;
-      outline: 0;
-      transition: all 0.2s ease-in-out;
-      user-select: none;
-      &::after {
-        left: 49%;
-        background-color: #9e9191;
-        content: "";
-        border-radius: 16px;
-        width: 50%;
-        overflow: hidden;
-        height: 93%;
-        position: relative;
-        display: block;
-        margin: 1px 0 0 0;
-      }
-    }
-  }
 }
 .nav-open {
   @include media(mobile) {

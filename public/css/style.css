@@ -50,6 +50,22 @@
     left: 2.5%;
   }
 }
+@keyframes darkmode-active {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes darkmode-desactive {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 /*!
  * Font Awesome Free 6.0.0-beta3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -9111,6 +9127,56 @@ button {
   }
 }
 
+@media (max-width: 576px) {
+  .nav .darkmode {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 0 15px 0;
+  }
+  .nav .darkmode__police {
+    font-size: medium;
+  }
+  .nav .darkmode .toggle {
+    display: none;
+  }
+  .nav .darkmode .toggleBtn {
+    border: 3px solid #9e9191;
+    border-radius: 16px;
+    align-self: center;
+    cursor: pointer;
+    display: block;
+    width: 70px;
+    height: 30px;
+    outline: 0;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+  }
+  .nav .darkmode .toggleBtn::before {
+    left: 1%;
+    background-color: #9e9191;
+    content: "";
+    border-radius: 16px;
+    width: 50%;
+    overflow: hidden;
+    height: 93%;
+    position: relative;
+    display: block;
+    margin: 1px 0 0 0;
+    cursor: pointer;
+  }
+  .nav .darkmode input:focus + .toggleBtn {
+    box-shadow: 0 0 0 4px #159ce4b3;
+    outline: none;
+  }
+  .nav .darkmode input:checked + .toggleBtn::before {
+    animation: darkmode-active 1s ease-in-out 0s 1 normal forwards;
+  }
+  .nav .darkmode input:not(:checked) + .toggleBtn::before {
+    animation: darkmode-desactive 1s ease-in-out 0s 1 normal forwards;
+  }
+}
+
 .wrapper-logo {
   height: 500px;
 }
@@ -9156,42 +9222,6 @@ button {
     display: none;
     margin: 0 0 0 -10px;
   }
-}
-.nav .darkmode {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 0 0 15px 0;
-}
-.nav .darkmode__police {
-  font-size: medium;
-}
-.nav .darkmode .toggle {
-  display: none;
-}
-.nav .darkmode .toggleBtn {
-  border: 3px solid #9e9191;
-  border-radius: 16px;
-  align-self: center;
-  cursor: pointer;
-  display: block;
-  width: 70px;
-  height: 30px;
-  outline: 0;
-  transition: all 0.2s ease-in-out;
-  user-select: none;
-}
-.nav .darkmode .toggleBtn::after {
-  left: 49%;
-  background-color: #9e9191;
-  content: "";
-  border-radius: 16px;
-  width: 50%;
-  overflow: hidden;
-  height: 93%;
-  position: relative;
-  display: block;
-  margin: 1px 0 0 0;
 }
 
 @media (max-width: 576px) {
