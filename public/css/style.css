@@ -9171,6 +9171,7 @@ button {
   }
   .nav .darkmode input:checked + .toggleBtn::before {
     animation: darkmode-active 1s ease-in-out 0s 1 normal forwards;
+    margin: 1px 0 0px -2px;
   }
   .nav .darkmode input:not(:checked) + .toggleBtn::before {
     animation: darkmode-desactive 1s ease-in-out 0s 1 normal forwards;
