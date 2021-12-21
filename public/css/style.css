@@ -8946,6 +8946,10 @@ body {
   }
 }
 
+.bodyId {
+  background-color: black;
+}
+
 .wrapper {
   display: none;
 }
