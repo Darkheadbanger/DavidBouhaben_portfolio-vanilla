@@ -9179,10 +9179,8 @@ button {
   }
 }
 
-.wrapper-logo {
+.header {
   height: 500px;
-}
-.wrapper-logo .header {
   width: 100%;
   height: 400px;
   background: url(../../public/image/coffee-header.jpg);
@@ -9192,7 +9190,7 @@ button {
   background-size: cover;
   background-attachment: scroll;
 }
-.wrapper-logo .header .wellcome {
+.header .wellcome {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -9202,14 +9200,14 @@ button {
   margin: auto;
   bottom: 10%;
 }
-.wrapper-logo .header .logo-container {
+.header .logo-container {
   height: 200px;
   text-align: center;
 }
-.wrapper-logo .header .header__logo {
+.header .header__logo {
   z-index: 99;
 }
-.wrapper-logo .header img {
+.header img {
   height: 100%;
   width: 100px;
   z-index: 99;
