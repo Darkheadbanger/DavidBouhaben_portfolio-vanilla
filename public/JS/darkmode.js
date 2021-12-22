@@ -9,10 +9,10 @@
     if (checkbox.checked) {
       console.log(checkbox.checked);
       bodyId.classList.add("bodyId");
-      darkmodeTextSombre.innerHTML = `<i class="fa-solid fa-circle-half-stroke"></i>Mode sombre`;
+      darkmodeTextSombre.innerHTML = `<i class="fas fa-lightbulb sombre"></i>Mode sombre`;
     } else {
       bodyId.classList.remove("bodyId");
-      darkmodeTextClaire.innerHTML = `<i class="fa-solid fa-circle-half-stroke"></i>Mode claire`;
+      darkmodeTextClaire.innerHTML = `<i class="far fa-lightbulb claire"></i>Mode claire`;
     }
   }
   checkbox.addEventListener("click", darkmode);

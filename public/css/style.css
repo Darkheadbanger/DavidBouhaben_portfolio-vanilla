@@ -9279,8 +9279,12 @@ button {
     height: auto;
     margin: 0px 6px -5px 0px;
   }
-  .nav-open .fa-circle-half-stroke {
+  .nav-open .sombre {
     color: black;
+    margin: 0 5px 0px 0px;
+  }
+  .nav-open .claire {
+    color: #b4b400;
     margin: 0 5px 0px 0px;
   }
 }
