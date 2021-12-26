@@ -9191,7 +9191,7 @@ button {
 }
 .container-header header {
   box-shadow: none !important;
-  background: white !important;
+  background: transparent !important;
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -9339,6 +9339,19 @@ button {
   }
   .nav-close .nav ul li .nav__link--active {
     color: white;
+  }
+  .nav-close img {
+    width: 6%;
+    height: auto;
+    margin: 0px 6px -5px 0px;
+  }
+  .nav-close .sombre {
+    color: black;
+    margin: 0 5px 0px 0px;
+  }
+  .nav-close .claire {
+    color: #b4b400;
+    margin: 0 5px 0px 0px;
   }
 }
 
