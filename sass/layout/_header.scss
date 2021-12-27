@@ -8,14 +8,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
-  header {
+  &__nav {
     box-shadow: none !important;
     background: transparent !important;
     position: fixed;
     width: 100%;
     z-index: 99;
   }
-  .wellcome {
+  .nav {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -23,17 +23,17 @@
     width: 90%;
     margin: auto;
     bottom: 10%;
-  }
-  .logo-container {
-    height: 200px;
-    text-align: center;
-  }
-  .header__logo {
-    z-index: 99;
-  }
-  img {
-    height: 100%;
-    width: 100px;
-    z-index: 99;
+    &__logo {
+      height: 200px;
+      text-align: center;
+    }
+    &--modifier {
+      z-index: 99;
+    }
+    img {
+      height: 100%;
+      width: 100px;
+      z-index: 99;
+    }
   }
 }

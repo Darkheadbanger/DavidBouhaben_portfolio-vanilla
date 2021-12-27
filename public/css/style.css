@@ -9189,14 +9189,14 @@ button {
   background-size: cover;
   background-attachment: scroll;
 }
-.container-header header {
+.container-header__nav {
   box-shadow: none !important;
   background: transparent !important;
   position: fixed;
   width: 100%;
   z-index: 99;
 }
-.container-header .wellcome {
+.container-header .nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -9205,14 +9205,14 @@ button {
   margin: auto;
   bottom: 10%;
 }
-.container-header .logo-container {
+.container-header .nav__logo {
   height: 200px;
   text-align: center;
 }
-.container-header .header__logo {
+.container-header .nav--modifier {
   z-index: 99;
 }
-.container-header img {
+.container-header .nav img {
   height: 100%;
   width: 100px;
   z-index: 99;
