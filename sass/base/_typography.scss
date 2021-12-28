@@ -1,16 +1,28 @@
+// @font-face {
+//   font-family: "Cardo";
+//   src: url(/public/fonts/Cardo/Cardo-Regular.ttf) format("truetype");
+// }
+// @font-face {
+//   font-family: "Oswald";
+//   src: url(/public/fonts/Oswald/static/Oswald-Regular.ttf) format("truetype");
+// }
+
 body {
-  font-family: Verdana, "Geneva", Tahoma, sans-serif;
+  font-family: "Geneva", Tahoma, sans-serif;
   color: $colour-primary;
   font-size: 2rem;
   font-weight: 100;
   line-height: 1.7;
 }
 
-h1 {
-  font-family: Verdana, "Geneva", Tahoma, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Verdana, "Geneva", Tahoma, sans-serif !important;
   font-weight: 900;
-  font-size: 5rem;
-  font-style: italic;
 }
 
 textarea {

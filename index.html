@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="/public/css/style.css.map" />
     <title>David Bouhaben ePortfolio</title>
   </head>
-  <!-- Ici, le nav -->
   <body class="" id="bodyId">
+    <div class="loading--circle loading--full-hight">
+      <div class="loading--box loading--full-hight"></div>
+    </div>
+    <!-- Ici, le nav -->
     <div id="navId" class="">
       <nav id="nav" class="nav">
         <ul>
@@ -55,28 +58,42 @@
         </ul>
       </nav>
     </div>
-    <div class="loading--circle loading--full-hight">
-      <div class="loading--box loading--full-hight"></div>
-    </div>
+
     <!-- Ici, Header -->
-    <header id="site-header" class="wrapper">
-      <div class="container-header">
-        <div class="container-header__nav">
-          <div id="home" class="nav nav__logo">
-            <h1 class="nav__logo--modifier">
-              <a href="/index.html"
-                ><img
-                  src="./public/image/Logo-david-bouhaben.png"
-                  alt="Logo David Bouhaben"
-              /></a>
-            </h1>
-            <div class="container-hamburger">
-              <button class="hamburger-toggle">
-                <span class="bar-top"></span>
-                <span class="bar-mid"></span>
-                <span class="bar-bot"></span>
-              </button>
+    <header id="site-header" class="wrapper container-header">
+      <div class="container-header__background">
+        <div class="container-header__info">
+          <div class="container-header__nav">
+            <div id="home" class="nav nav__logo">
+              <h1 class="nav__logo--modifier">
+                <a href="/index.html"
+                  ><img
+                    src="./public/image/Logo-david-bouhaben.png"
+                    alt="Logo David Bouhaben"
+                /></a>
+              </h1>
+              <div class="hamburger">
+                <button class="hamburger-toggle">
+                  <span class="bar-top"></span>
+                  <span class="bar-mid"></span>
+                  <span class="bar-bot"></span>
+                </button>
+              </div>
             </div>
+          </div>
+          <!-- Gif stopped programmatically -->
+          <div class="container-information">
+            <!-- <img src="./public/image/CV.png" alt="Logo CV David Bouhaben"/> -->
+            <div class="container-information__name container-information__name--modifier">
+              <h1>David Bouhaben</h1>
+              <h2>Développeur web/Front-End</h2>
+              <p>Je suis à la recherche d'un contrat en alternance qui
+                me permettrait d’acquérir de nouvelles
+                compétences dans le développement web (côté Front-End, Back-end ou FullStack).
+                Vous pouvez regarder ma <a href="https://paper.li/e-1598349115">curation de contenu ici</a>. Voulez-vous savoir plus sur moi ? Vous pouvez consulter mon travail sur <a href="https://github.com/Darkheadbanger">Git</a> et vous pouvez télécharger mon <a href="/public/CV/CV_Bouhaben_David_FrontEndDevelopper.pdf" target="_blank" rel="noopener"> CV ici </a>
+              </p>
+            </div>
+          </div>
           </div>
         </div>
       </div>

@@ -1,39 +1,75 @@
 .container-header {
-  height: 500px;
   width: 100%;
-  height: 400px;
+  height: 500px;
   background: url(../../public/image/coffee-header.jpg);
   // position: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
+  border: 1px solid red;
+  &__background {
+    width: 100%;
+    height: 500px;
+    background-color: #00000080;
+  }
+  &__info {
+    border: 1px solid violet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container-information {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__name {
+        &--modifier {
+          color: #ffffff;
+        }
+        h2 {
+          font-size: medium;
+          margin: -10px 0px 0px 3px;
+          color: #dadada;
+        }
+        p {
+          font-size: small;
+          margin: 15px 0px 0px 3px;
+          color: #dadada;
+        }
+        a {
+          color: #569ded;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   &__nav {
     box-shadow: none !important;
     background: transparent !important;
-    position: fixed;
+    position: sticky; //ou fixed, Pour pouvoir faire suivre le nav quand on scroll vers le bas
     width: 100%;
     z-index: 99;
-  }
-  .nav {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    bottom: 10%;
-    &__logo {
-      height: 200px;
-      text-align: center;
-    }
-    &--modifier {
-      z-index: 99;
-    }
-    img {
-      height: 100%;
-      width: 100px;
-      z-index: 99;
+    .nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 90%;
+      margin: auto;
+      bottom: 10%;
+      border: 1px solid blue;
+      &__logo {
+        height: 200px;
+        text-align: center;
+      }
+      &--modifier {
+        z-index: 99;
+      }
+      img {
+        height: 100%;
+        width: 100px;
+        z-index: 99;
+      }
     }
   }
 }
