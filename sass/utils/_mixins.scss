@@ -82,10 +82,9 @@
     display: block;
     position: absolute;
     top: 20%;
-    left: 2.5%;
-    text-align: center;
     ul {
       display: inline-block;
+      text-align: center;
       .li {
         &:first-child {
           background-color: $coulour-bacground-link-active;
