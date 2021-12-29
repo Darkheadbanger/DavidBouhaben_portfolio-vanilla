@@ -9184,7 +9184,7 @@ button {
 
 .container-header {
   width: 100%;
-  height: 500px;
+  height: 550px;
   background: url(../../public/image/coffee-header.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -9194,7 +9194,7 @@ button {
 }
 .container-header__background {
   width: 100%;
-  height: 500px;
+  height: 550px;
   background-color: #00000080;
 }
 .container-header__info {
@@ -9224,15 +9224,28 @@ button {
   font-size: medium;
   color: #dadada;
 }
+.container-header__info .bio {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .container-header__info .bio p {
   font-size: small;
-  margin: 0px 0px 0px 2px;
+  margin: 0px 0px 5vh 2px;
   color: #dadada;
   white-space: pre-line;
 }
 .container-header__info .bio a {
   color: #569ded;
   text-decoration: none;
+}
+.container-header__info .bio .tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container-header__info .bio .tech--modifier {
+  color: #f0f0f0;
 }
 .container-header__nav {
   box-shadow: none !important;
@@ -9452,11 +9465,11 @@ button {
   }
 }
 
-.iconList {
+.reseaux-sociaux {
   width: 90%;
   height: 6vh;
 }
-.iconList ul {
+.reseaux-sociaux ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -9464,14 +9477,14 @@ button {
   justify-content: flex-start;
   margin: 0px 0px 0px -16px;
 }
-.iconList ul a {
+.reseaux-sociaux ul a {
   background-color: #BA8C63;
   color: white;
   padding: 0px 10px;
   display: inline-block;
   border-radius: 25%;
 }
-.iconList ul li {
+.reseaux-sociaux ul li {
   margin: 0px 15px 0px 0px;
 }
 

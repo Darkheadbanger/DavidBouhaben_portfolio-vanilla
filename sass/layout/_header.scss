@@ -1,6 +1,6 @@
 .container-header {
   width: 100%;
-  height: 500px;
+  height: 550px;
   background: url(../../public/image/coffee-header.jpg);
   // position: fixed;
   background-position: center;
@@ -10,7 +10,7 @@
   border: 1px solid red;
   &__background {
     width: 100%;
-    height: 500px;
+    height: 550px;
     background-color: #00000080;
   }
   &__info {
@@ -40,15 +40,28 @@
       }
     }
     .bio {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
       p {
         font-size: small;
-        margin: 0px 0px 0px 2px;
+        margin: 0px 0px 5vh 2px;
         color: #dadada;
         white-space: pre-line;
+        // height: 5hv;
       }
       a {
         color: #569ded;
         text-decoration: none;
+      }
+      .tech {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+          &--modifier {
+            color: rgb(240, 240, 240);
+          }
+        
       }
     }
   }
