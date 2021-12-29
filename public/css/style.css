@@ -9228,6 +9228,7 @@ button {
   font-size: small;
   margin: 0px 0px 0px 2px;
   color: #dadada;
+  white-space: pre-line;
 }
 .container-header__info .bio a {
   color: #569ded;
