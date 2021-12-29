@@ -9202,26 +9202,34 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
 }
 .container-header__info .container-information {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 11vh;
 }
-.container-header__info .container-information__name--modifier {
+.container-header__info .container-information__bio {
+  margin: -10px 0px 0px -19px;
+}
+.container-header__info .container-information__bio--modifier {
   color: #ffffff;
 }
-.container-header__info .container-information__name h2 {
-  font-size: medium;
+.container-header__info .container-information__bio h2 {
   margin: -10px 0px 0px 3px;
+  font-size: medium;
   color: #dadada;
 }
-.container-header__info .container-information__name p {
+.container-header__info .bio p {
   font-size: small;
-  margin: 15px 0px 0px 3px;
+  margin: 0px 0px 0px 2px;
   color: #dadada;
 }
-.container-header__info .container-information__name a {
+.container-header__info .bio a {
   color: #569ded;
   text-decoration: none;
 }
@@ -9237,13 +9245,11 @@ button {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 90%;
-  margin: auto;
   bottom: 10%;
   border: 1px solid blue;
 }
 .container-header__nav .nav__logo {
-  height: 200px;
+  height: 19vh;
   text-align: center;
 }
 .container-header__nav .nav--modifier {
