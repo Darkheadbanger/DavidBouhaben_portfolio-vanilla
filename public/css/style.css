@@ -9020,7 +9020,7 @@ button {
   outline-width: 0;
 }
 .hamburger .hamburger-toggle [class*=bar-] {
-  background: #4bd16f;
+  background: #BA8C63;
   display: block;
   transform: rotate(0deg);
   transition: 0.2s ease all;
@@ -9211,7 +9211,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 11vh;
+  height: 8vh;
 }
 .container-header__info .container-information__bio {
   margin: -10px 0px 0px -19px;
@@ -9450,6 +9450,29 @@ button {
   .nav-animation .nav ul li .nav__link--active {
     color: white;
   }
+}
+
+.iconList {
+  width: 90%;
+  height: 6vh;
+}
+.iconList ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0px 0px 0px -16px;
+}
+.iconList ul a {
+  background-color: #BA8C63;
+  color: white;
+  padding: 0px 10px;
+  display: inline-block;
+  border-radius: 25%;
+}
+.iconList ul li {
+  margin: 0px 15px 0px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

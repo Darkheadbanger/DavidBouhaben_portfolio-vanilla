@@ -50,3 +50,28 @@
       forwards;
   }
 }
+
+// Nav IconList
+
+.iconList {
+  width: 90%;
+  height: 6vh;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0px 0px 0px -16px;
+    a{
+      background-color: #BA8C63;
+      color: white;
+      padding: 0px 10px;
+      display: inline-block;
+      border-radius: 25%;
+    }
+    li {
+      margin: 0px 15px 0px 0px;
+    }
+  }
+}
