@@ -58,13 +58,32 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-          &--modifier {
-            color: rgb(240, 240, 240);
-          }
-        
+        &--modifier {
+          color: rgb(240, 240, 240);
+        }
       }
     }
   }
+  // Pour overlay fontawesome tech
+  .container {
+    &:hover {
+      .overlay {
+        opacity: 0.5;
+      }
+    }
+    .overlay {
+      position: fixed;
+      top: 52.9vh;
+      height: 1.9em;
+      width: 2.5em;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+      background-color: #008cba;
+      left: 5.9vh;
+      border-radius: 25%;
+    }
+  }
+
   &__nav {
     box-shadow: none !important;
     background: transparent !important;

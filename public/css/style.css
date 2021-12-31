@@ -9247,6 +9247,20 @@ button {
 .container-header__info .bio .tech--modifier {
   color: #f0f0f0;
 }
+.container-header .container:hover .overlay {
+  opacity: 0.5;
+}
+.container-header .container .overlay {
+  position: fixed;
+  top: 52.9vh;
+  height: 1.9em;
+  width: 2.5em;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  background-color: #008cba;
+  left: 5.9vh;
+  border-radius: 25%;
+}
 .container-header__nav {
   box-shadow: none !important;
   background: transparent !important;
