@@ -9020,7 +9020,7 @@ button {
   outline-width: 0;
 }
 .hamburger .hamburger-toggle [class*=bar-] {
-  background: #BA8C63;
+  background: #ba8c63;
   display: block;
   transform: rotate(0deg);
   transition: 0.2s ease all;
@@ -9247,19 +9247,143 @@ button {
 .container-header__info .bio .tech--modifier {
   color: #f0f0f0;
 }
-.container-header .container:hover .overlay {
-  opacity: 0.5;
+@media (max-width: 576px) {
+  .container-header .container-overlay-1 {
+    left: 5.8vh;
+    top: 52.8vh;
+    width: 2.6em;
+  }
+  .container-header .container-overlay-1:hover .overlay {
+    opacity: 0.8;
+  }
+  .container-header .container-overlay-1 .overlay {
+    position: fixed;
+    top: 52.8vh;
+    height: 1.9em;
+    width: 2.5em;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background-color: #ba8c63;
+    border-radius: 25%;
+  }
+  .container-header .container-overlay-1 .overlay__text {
+    opacity: 1;
+    position: absolute;
+    left: 15%;
+    right: 0;
+  }
+  .container-header .container-overlay-1 .overlay__text--modifier {
+    color: black;
+  }
 }
-.container-header .container .overlay {
-  position: fixed;
-  top: 52.9vh;
-  height: 1.9em;
-  width: 2.5em;
-  opacity: 0;
-  transition: 0.5s ease-in-out;
-  background-color: #008cba;
-  left: 5.9vh;
-  border-radius: 25%;
+@media (max-width: 576px) {
+  .container-header .container-overlay-2 {
+    top: 52.75vh;
+    left: 14.2vh;
+  }
+  .container-header .container-overlay-2:hover .overlay {
+    opacity: 0.8;
+  }
+  .container-header .container-overlay-2 .overlay {
+    position: fixed;
+    top: 52.8vh;
+    height: 1.9em;
+    width: 2.5em;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background-color: #ba8c63;
+    border-radius: 25%;
+  }
+  .container-header .container-overlay-2 .overlay__text {
+    opacity: 1;
+    position: absolute;
+    left: 15%;
+    right: 0;
+  }
+  .container-header .container-overlay-2 .overlay__text--modifier {
+    color: black;
+  }
+}
+@media (max-width: 576px) {
+  .container-header .container-overlay-3 {
+    left: 21.3vh;
+  }
+  .container-header .container-overlay-3:hover .overlay {
+    opacity: 0.8;
+  }
+  .container-header .container-overlay-3 .overlay {
+    position: fixed;
+    top: 52.8vh;
+    height: 1.9em;
+    width: 2.5em;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background-color: #ba8c63;
+    border-radius: 25%;
+  }
+  .container-header .container-overlay-3 .overlay__text {
+    opacity: 1;
+    position: absolute;
+    left: 15%;
+    right: 0;
+  }
+  .container-header .container-overlay-3 .overlay__text--modifier {
+    color: black;
+  }
+}
+@media (max-width: 576px) {
+  .container-header .container-overlay-4 {
+    left: 28vh;
+  }
+  .container-header .container-overlay-4:hover .overlay {
+    opacity: 0.8;
+  }
+  .container-header .container-overlay-4 .overlay {
+    position: fixed;
+    top: 52.8vh;
+    height: 1.9em;
+    width: 2.5em;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background-color: #ba8c63;
+    border-radius: 25%;
+  }
+  .container-header .container-overlay-4 .overlay__text {
+    opacity: 1;
+    position: absolute;
+    left: 15%;
+    right: 0;
+  }
+  .container-header .container-overlay-4 .overlay__text--modifier {
+    color: black;
+  }
+}
+@media (max-width: 576px) {
+  .container-header .container-overlay-5 {
+    left: 35.5vh;
+  }
+  .container-header .container-overlay-5:hover .overlay {
+    opacity: 0.8;
+  }
+  .container-header .container-overlay-5 .overlay {
+    position: fixed;
+    top: 52.8vh;
+    height: 1.9em;
+    width: 2.5em;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background-color: #ba8c63;
+    border-radius: 25%;
+  }
+  .container-header .container-overlay-5 .overlay__text {
+    opacity: 1;
+    position: absolute;
+    left: 15%;
+    right: 0;
+  }
+  .container-header .container-overlay-5 .overlay__text--modifier {
+    color: black;
+  }
 }
 .container-header__nav {
   box-shadow: none !important;
