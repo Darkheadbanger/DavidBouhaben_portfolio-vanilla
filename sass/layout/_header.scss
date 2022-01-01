@@ -68,36 +68,68 @@
   .container-overlay-1 {
     @include media(mobile) {
       @include overlayTech;
-      left: 5.8vh;
-      top: 52.8vh;
-      width: 2.6em;
+      .overlay {
+        height: 2.7em;
+        left: 7.5vh;
+        top: 52vh;
+        width: 2.6em;
+      }
     }
   }
   .container-overlay-2 {
     @include media(mobile) {
       @include overlayTech;
-      top: 52.75vh;
-      left: 14.2vh;
+      .overlay {
+        height: 2.7em;
+        width: 2.5em;
+        top: 52vh;
+        left: 17.5vh;
+      }
     }
   }
   .container-overlay-3 {
     @include media(mobile) {
       @include overlayTech;
-      left: 21.3vh;
+      .overlay {
+        height: 2.7em;
+        width: 2.5em;
+        top: 52vh;
+        left: 26.45vh;
+        &__text {
+          left: 6% !important; 
+        }
+      }
     }
   }
   .container-overlay-4 {
     @include media(mobile) {
       @include overlayTech;
-      left: 28vh;
+      .overlay {
+        height: 2.7em;
+        width: 2.5em;
+        top: 52vh;
+        left: 34.8vh;
+        &__text {
+          left: 6%;
+          top: 22%;
+        }
+      }
     }
   }
-  .container-overlay-5 {
-    @include media(mobile) {
-      @include overlayTech;
-      left: 35.5vh;
-    }
-  }
+  // .container-overlay-5 {
+  //   @include media(mobile) {
+  //     @include overlayTech;
+  //     .overlay {
+  //       height: 2.7em;
+  //       width: 2.5em;
+  //       top: 52vh;
+  //       left: 35.4vh;
+  //       &__text {
+  //         left: 15%;
+  //       }
+  //     }
+  //   }
+  // }
 
   &__nav {
     box-shadow: none !important;

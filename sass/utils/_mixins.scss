@@ -131,48 +131,6 @@
 
 @mixin overlayTech {
   // Pour overlay fontawesome tech
-  // &:hover {
-  //   .overlay-1,
-  //   .overlay-2,
-  //   .overlay-3,
-  //   .overlay-4,
-  //   .overlay-5 {
-  //     opacity: 0.8;
-  //   }
-  // }
-  // .overlay-1,
-  // .overlay-2,
-  // .overlay-3,
-  // .overlay-4,
-  // .overlay-5 {
-  //   position: fixed;
-  //   top: 52.8vh;
-  //   height: 1.9em;
-  //   width: 2.5em;
-  //   opacity: 0;
-  //   transition: 0.5s ease-in-out;
-  //   background-color: #ba8c63;
-  //   left: 5.9vh;
-  //   border-radius: 25%;
-  //   &__text-1,
-  //   &__text-2,
-  //   &__text-3,
-  //   &__text-4,
-  //   &__text-5 {
-  //     opacity: 1;
-  //     position: absolute;
-  //     left: 15%;
-  //     right: 0;
-  //     &--modifier-1,
-  //     &--modifier-2,
-  //     &--modifier-3,
-  //     &--modifier-4,
-  //     &--modifier-5 {
-  //       color: black;
-  //     }
-  //   }
-  // }
-
   &:hover {
     .overlay {
       opacity: 0.8;
@@ -180,18 +138,17 @@
   }
   .overlay {
     position: fixed;
-    top: 52.8vh;
-    height: 1.9em;
-    width: 2.5em;
     opacity: 0;
     transition: 0.5s ease-in-out;
-    background-color: #ba8c63;
+    background-color: white;
     border-radius: 25%;
     &__text {
       opacity: 1;
       position: absolute;
-      left: 15%;
       right: 0;
+      font-size: medium;
+      overflow-y: visible;
+      left: 15%;
       &--modifier {
         color: black;
       }
