@@ -9271,7 +9271,7 @@ button {
   .container-header .container-overlay-1 .overlay {
     height: 2.7em;
     left: 7.5vh;
-    top: 52vh;
+    top: 50vh;
     width: 2.6em;
   }
 }
@@ -9301,7 +9301,7 @@ button {
   .container-header .container-overlay-2 .overlay {
     height: 2.7em;
     width: 2.5em;
-    top: 52vh;
+    top: 50vh;
     left: 17.5vh;
   }
 }
@@ -9331,7 +9331,7 @@ button {
   .container-header .container-overlay-3 .overlay {
     height: 2.7em;
     width: 2.5em;
-    top: 52vh;
+    top: 50vh;
     left: 26.45vh;
   }
   .container-header .container-overlay-3 .overlay__text {
@@ -9364,7 +9364,7 @@ button {
   .container-header .container-overlay-4 .overlay {
     height: 2.7em;
     width: 2.5em;
-    top: 52vh;
+    top: 50vh;
     left: 34.8vh;
   }
   .container-header .container-overlay-4 .overlay__text {
