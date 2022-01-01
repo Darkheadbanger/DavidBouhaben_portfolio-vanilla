@@ -9190,7 +9190,6 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
-  border: 1px solid red;
 }
 .container-header__background {
   width: 100%;
@@ -9198,7 +9197,6 @@ button {
   background-color: #00000080;
 }
 .container-header__info {
-  border: 1px solid violet;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9211,7 +9209,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 8vh;
+  height: 9vh;
 }
 .container-header__info .container-information__bio {
   margin: -10px 0px 0px -19px;
@@ -9249,7 +9247,7 @@ button {
 }
 @media (max-width: 576px) {
   .container-header .container-overlay-1:hover .overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   .container-header .container-overlay-1 .overlay {
     position: fixed;
@@ -9257,6 +9255,7 @@ button {
     transition: 0.5s ease-in-out;
     background-color: white;
     border-radius: 25%;
+    cursor: default;
   }
   .container-header .container-overlay-1 .overlay__text {
     opacity: 1;
@@ -9278,7 +9277,7 @@ button {
 }
 @media (max-width: 576px) {
   .container-header .container-overlay-2:hover .overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   .container-header .container-overlay-2 .overlay {
     position: fixed;
@@ -9286,6 +9285,7 @@ button {
     transition: 0.5s ease-in-out;
     background-color: white;
     border-radius: 25%;
+    cursor: default;
   }
   .container-header .container-overlay-2 .overlay__text {
     opacity: 1;
@@ -9307,7 +9307,7 @@ button {
 }
 @media (max-width: 576px) {
   .container-header .container-overlay-3:hover .overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   .container-header .container-overlay-3 .overlay {
     position: fixed;
@@ -9315,6 +9315,7 @@ button {
     transition: 0.5s ease-in-out;
     background-color: white;
     border-radius: 25%;
+    cursor: default;
   }
   .container-header .container-overlay-3 .overlay__text {
     opacity: 1;
@@ -9339,7 +9340,7 @@ button {
 }
 @media (max-width: 576px) {
   .container-header .container-overlay-4:hover .overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   .container-header .container-overlay-4 .overlay {
     position: fixed;
@@ -9347,6 +9348,7 @@ button {
     transition: 0.5s ease-in-out;
     background-color: white;
     border-radius: 25%;
+    cursor: default;
   }
   .container-header .container-overlay-4 .overlay__text {
     opacity: 1;
@@ -9375,6 +9377,7 @@ button {
   position: sticky;
   width: 100%;
   z-index: 99;
+  height: 16vh;
 }
 .container-header__nav .nav {
   display: flex;
@@ -9382,10 +9385,10 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
   bottom: 10%;
-  border: 1px solid blue;
 }
 .container-header__nav .nav__logo {
-  height: 19vh;
+  height: 13vh;
+  bottom: 0vh;
   text-align: center;
 }
 .container-header__nav .nav--modifier {
@@ -9599,15 +9602,15 @@ button {
   justify-content: flex-start;
   margin: 0px 0px 0px -16px;
 }
+.reseaux-sociaux ul li {
+  margin: 0px 15px 0px 0px;
+}
 .reseaux-sociaux ul a {
-  background-color: #BA8C63;
+  background-color: #ba8c63;
   color: white;
   padding: 0px 10px;
   display: inline-block;
   border-radius: 25%;
-}
-.reseaux-sociaux ul li {
-  margin: 0px 15px 0px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -63,15 +63,17 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 0px 0px 0px -16px;
-    a{
-      background-color: #BA8C63;
+    
+    li {
+      margin: 0px 15px 0px 0px;
+    }
+    a {
+      background-color: #ba8c63;
       color: white;
       padding: 0px 10px;
       display: inline-block;
       border-radius: 25%;
     }
-    li {
-      margin: 0px 15px 0px 0px;
-    }
+    
   }
 }

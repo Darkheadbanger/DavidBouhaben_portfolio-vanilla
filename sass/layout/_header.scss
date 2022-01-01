@@ -7,14 +7,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
-  border: 1px solid red;
+  // border: 1px solid red;
   &__background {
     width: 100%;
     height: 550px;
     background-color: #00000080;
   }
   &__info {
-    border: 1px solid violet;
+    // border: 1px solid violet;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +26,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 8vh;
+      height: 9vh;
       &__bio {
         margin: -10px 0px 0px -19px;
         &--modifier {
@@ -136,15 +136,17 @@
     position: sticky; //ou fixed, Pour pouvoir faire suivre le nav quand on scroll vers le bas
     width: 100%;
     z-index: 99;
+    height: 16vh;
     .nav {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       justify-content: space-between;
       bottom: 10%;
-      border: 1px solid blue;
+      // border: 1px solid blue;
       &__logo {
-        height: 19vh;
+        height: 13vh;
+        bottom: 0vh;
         text-align: center;
       }
       &--modifier {

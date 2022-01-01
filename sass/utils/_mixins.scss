@@ -133,7 +133,7 @@
   // Pour overlay fontawesome tech
   &:hover {
     .overlay {
-      opacity: 0.8;
+      opacity: 0.9;
     }
   }
   .overlay {
@@ -142,6 +142,7 @@
     transition: 0.5s ease-in-out;
     background-color: white;
     border-radius: 25%;
+    cursor: default;
     &__text {
       opacity: 1;
       position: absolute;
