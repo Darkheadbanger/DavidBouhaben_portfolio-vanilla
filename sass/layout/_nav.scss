@@ -56,14 +56,13 @@
 .reseaux-sociaux {
   width: 90%;
   height: 6vh;
+  margin: 0px 0px 1vh 2px;
   ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0px 0px 0px -16px;
-    
     li {
       margin: 0px 15px 0px 0px;
     }
@@ -74,6 +73,5 @@
       display: inline-block;
       border-radius: 25%;
     }
-    
   }
 }
