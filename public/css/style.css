@@ -9262,6 +9262,9 @@ button {
     display: flex;
     flex-direction: column;
   }
+  .container-header .container-overlay span {
+    font-size: medium;
+  }
   .container-header .container-overlay .overlay {
     display: none;
   }

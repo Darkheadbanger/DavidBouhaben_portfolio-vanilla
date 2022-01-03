@@ -79,6 +79,9 @@
     @include media(mobile) {
       display: flex;
       flex-direction: column;
+      span {
+        font-size: medium;
+      }
       .overlay {
         display: none;
         &__text {
