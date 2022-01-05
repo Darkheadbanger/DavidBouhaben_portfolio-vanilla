@@ -14,10 +14,7 @@ html {
 body {
   box-sizing: border-box;
   // font-family: Verdana, "Geneva", Tahoma, sans-serif;
-  background: $colour-secondary;
-  @include media(mobile) {
-    background: $colour-background-mobile;
-  }
+  background: $colour-background-mobile;
 }
 
 .bodyId {

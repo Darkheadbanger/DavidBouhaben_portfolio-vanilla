@@ -63,9 +63,9 @@
 
 // Breakpoints here
 
-@mixin media($keys) {
-  @each $key in $keys {
-    @media (max-width: map-get($breakpoints, $key)) {
+@mixin media($breapoints) {
+  @each $breakpoint in $breapoints {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
   }

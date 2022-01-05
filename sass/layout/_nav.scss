@@ -2,13 +2,13 @@
   display: none;
 }
 .nav {
-  @include media(mobile) {
+  @include media("dekstop") {
     display: none;
     margin: 0 0 0 -10px;
   }
 }
 .nav-open {
-  @include media(mobile) {
+  @include media("dekstop") {
     @include navOpenClose;
     animation: nav--open 1s ease-in-out 0s 1 normal forwards;
     @include drapeaulangue;
@@ -29,7 +29,7 @@
   }
 }
 .nav-close {
-  @include media(mobile) {
+  @include media("dekstop") {
     @include navOpenClose;
     animation: nav--close 1s ease-in-out 0s 1 normal forwards;
     @include drapeaulangue;
@@ -44,7 +44,7 @@
   }
 }
 .nav-animation {
-  @include media(mobile) {
+  @include media("dekstop") {
     @include navOpenClose;
     animation: menu 1.9s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal
       forwards;
