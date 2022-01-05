@@ -9351,7 +9351,6 @@ button {
   .nav-open .nav ul li {
     border-bottom: 1px solid #7a7a7a;
     padding: 20px;
-    width: 100%;
     list-style: none;
     cursor: pointer;
     overflow: hidden;
@@ -9381,6 +9380,10 @@ button {
   }
   .nav-open ul {
     display: block;
+  }
+  .nav-open ul li {
+    margin: 0px 0 0px 0px;
+    width: 100%;
   }
   .nav-open ul .icon {
     margin: 0 5px 2px 0px;
@@ -9419,7 +9422,6 @@ button {
   .nav-close .nav ul li {
     border-bottom: 1px solid #7a7a7a;
     padding: 20px;
-    width: 100%;
     list-style: none;
     cursor: pointer;
     overflow: hidden;
@@ -9446,6 +9448,16 @@ button {
     width: 6%;
     height: auto;
     margin: 0px 6px -5px 0px;
+  }
+  .nav-close ul {
+    display: block;
+  }
+  .nav-close ul li {
+    width: 97.5%;
+    margin: 0px 0 0px 10px;
+  }
+  .nav-close ul .icon {
+    margin: 0 5px 2px 0px;
   }
   .nav-close .sombre {
     color: black;
@@ -9481,7 +9493,6 @@ button {
   .nav-animation .nav ul li {
     border-bottom: 1px solid #7a7a7a;
     padding: 20px;
-    width: 100%;
     list-style: none;
     cursor: pointer;
     overflow: hidden;

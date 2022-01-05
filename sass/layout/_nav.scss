@@ -14,6 +14,10 @@
     @include drapeaulangue;
     ul {
       display: block;
+      li {
+        margin: 0px 0 0px 0px;
+        width: 100%;
+      }
       .icon {
         margin: 0 5px 2px 0px;
       }
@@ -28,11 +32,24 @@
     }
   }
 }
+
+// animation: nav--close 1s ease-in-out 0s 1 normal forwards;
+
 .nav-close {
   @include media("dekstop") {
     @include navOpenClose;
     animation: nav--close 1s ease-in-out 0s 1 normal forwards;
     @include drapeaulangue;
+    ul {
+      display: block;
+      li {
+        width: 97.5%;
+        margin: 0px 0 0px 10px;
+      }
+      .icon {
+        margin: 0 5px 2px 0px;
+      }
+    }
     .sombre {
       color: black;
       margin: 0 5px 0px 0px;
@@ -56,7 +73,7 @@
 .reseaux-sociaux {
   width: 90%;
   height: auto;
-  margin: 0px 0px 5vh 2px;  
+  margin: 0px 0px 5vh 2px;
   ul {
     list-style: none;
     display: flex;
