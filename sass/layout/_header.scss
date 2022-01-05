@@ -1,6 +1,6 @@
 .container-header {
   width: 100%;
-  height: 550px;
+  height: auto;
   background: url(../../public/image/coffee-header.jpg);
   // position: fixed;
   background-position: center;
@@ -10,7 +10,7 @@
   // border: 1px solid red;
   &__background {
     width: 100%;
-    height: 550px;
+    height: auto;
     background-color: #00000080;
   }
   &__info {
@@ -58,7 +58,6 @@
       &__element {
         font-size: small;
         margin: 0px 0px 5vh 2px;
-        white-space: pre-line;
         // height: 5hv;
         &--modifier {
           color: #dadada;
@@ -199,7 +198,8 @@
     position: sticky; //ou fixed, Pour pouvoir faire suivre le nav quand on scroll vers le bas
     width: 100%;
     z-index: 99;
-    height: 14vh;
+    height: auto;
+    margin: 0 0 3vh 0;
     .nav {
       display: flex;
       align-items: center;
@@ -208,8 +208,7 @@
       bottom: 10%;
       // border: 1px solid blue;
       &__logo {
-        height: 13vh;
-        bottom: 0vh;
+        height: auto;
         text-align: center;
       }
       &--modifier {

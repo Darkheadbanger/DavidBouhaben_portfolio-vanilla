@@ -9184,7 +9184,7 @@ button {
 
 .container-header {
   width: 100%;
-  height: 550px;
+  height: auto;
   background: url(../../public/image/coffee-header.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -9193,7 +9193,7 @@ button {
 }
 .container-header__background {
   width: 100%;
-  height: 550px;
+  height: auto;
   background-color: #00000080;
 }
 .container-header__info {
@@ -9242,7 +9242,6 @@ button {
 .container-header__info .bio__element {
   font-size: small;
   margin: 0px 0px 5vh 2px;
-  white-space: pre-line;
 }
 .container-header__info .bio__element--modifier {
   color: #dadada;
@@ -9284,7 +9283,8 @@ button {
   position: sticky;
   width: 100%;
   z-index: 99;
-  height: 14vh;
+  height: auto;
+  margin: 0 0 3vh 0;
 }
 .container-header__nav .nav {
   display: flex;
@@ -9294,8 +9294,7 @@ button {
   bottom: 10%;
 }
 .container-header__nav .nav__logo {
-  height: 13vh;
-  bottom: 0vh;
+  height: auto;
   text-align: center;
 }
 .container-header__nav .nav--modifier {
@@ -9499,8 +9498,8 @@ button {
 
 .reseaux-sociaux {
   width: 90%;
-  height: 6vh;
-  margin: 0px 0px 1vh 2px;
+  height: auto;
+  margin: 0px 0px 5vh 2px;
 }
 .reseaux-sociaux ul {
   list-style: none;
