@@ -9209,11 +9209,13 @@ button {
   display: flex;
   flex-direction: column;
   align-items: left;
-  height: 10vh;
+  height: auto !important;
+  margin: 0px 0 -39px 0;
 }
 @media (max-width: 408.98px) {
   .container-header__info .container-information {
-    height: 8vh;
+    height: auto !important;
+    margin: 0px 0 -33px 0;
   }
 }
 .container-header__info .container-information__info {
