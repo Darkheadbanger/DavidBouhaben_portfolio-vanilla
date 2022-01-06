@@ -9204,13 +9204,6 @@ button {
   flex-direction: column;
   align-items: left;
   height: auto !important;
-  margin: 0px 0 -39px 0;
-}
-@media (max-width: 991.98px) {
-  .container-header__info .container-information {
-    height: auto !important;
-    margin: 0px 0 -33px 0;
-  }
 }
 .container-header__info .container-information__info {
   margin: 0px 0px 5vh 2px;
@@ -9518,9 +9511,9 @@ button {
 }
 
 .reseaux-sociaux {
-  width: 90%;
+  width: 100%;
   height: auto;
-  margin: 0px 0px 5vh 2px;
+  margin: -5vh 0px 5vh 2px;
 }
 .reseaux-sociaux ul {
   list-style: none;

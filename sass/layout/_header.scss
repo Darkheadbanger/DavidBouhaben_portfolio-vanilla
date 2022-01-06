@@ -28,12 +28,6 @@
       align-items: left;
       height: auto !important;
       // min-height: 11.5vh;
-      margin: 0px 0 -39px 0;
-      @include media("dekstop") {
-        height: auto !important;
-        // min-height: 11vh;
-        margin: 0px 0 -33px 0;
-      }
       &__info {
         margin: 0px 0px 5vh 2px;
         &--modifier {
