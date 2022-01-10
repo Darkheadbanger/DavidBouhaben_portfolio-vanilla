@@ -59,7 +59,7 @@
               />Version Française</a
             >
           </li>
-          <div class="darkmode">
+          <span class="darkmode">
             <span id="darkmode-Text" class="dark__police"
               ><i class="far fa-lightbulb claire"></i>Mode claire</span
             >
@@ -70,7 +70,7 @@
               id="darkmode"
             />
             <label for="darkmode" class="toggleBtn"></label>
-          </div>
+          </span>
         </ul>
       </nav>
     </div>
@@ -85,14 +85,73 @@
               class="currentTime currentTime__element currentTime__element--modifier"
             ></span>
 
-            <div id="home" class="nav nav__logo">
-              <span class="nav__logo--modifier">
+            <div id="home" class="top top__logo">
+              <span class="top__logo--modifier">
                 <a href="/index.html"
                   ><img
+                    class="logo-img"
                     src="./public/image/Logo-david-bouhaben.png"
                     alt="Logo David Bouhaben"
                 /></a>
               </span>
+
+              <nav id="nav-desktop" class="nav-desktop">
+                <ul>
+                  <li class="li">
+                    <a href="/about.html" class="nav__link nav__link--active"
+                      ><i class="fas fa-home icon"></i>Accueil</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#profil" class="nav__link"
+                      ><i class="fas fa-user icon"></i>Profil</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#portfolio" class="nav__link"
+                      ><i class="fas fa-briefcase icon"></i>Portfolio</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#CV" class="nav__link"
+                      ><i class="fas fa-book-open icon"></i>CV</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#Contact" class="nav__link"
+                      ><i class="fas fa-phone icon"></i>Contact</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#Activité" class="nav__link"
+                      ><i class="fas fa-tasks icon"></i>Activité Récente</a
+                    >
+                  </li>
+                  <!-- Langue, Anglais, Francais, Indonésien -->
+                  <a href="#langue" class="a">
+                    <li>
+                      <img
+                        class="image"
+                        src="./public/image/Drapeau/France.png"
+                        alt="France"
+                      />
+                      Version Française
+                    </li>
+                  </a>
+                  <span class="darkmode">
+                    <span id="darkmode-Text"
+                      ><i class="far fa-lightbulb claire"></i>Mode claire</span
+                    >
+                    <input
+                      type="checkbox"
+                      name="darkmode"
+                      class="toggle"
+                      id="darkmode"
+                    />
+                    <label for="darkmode" class="toggleBtn"></label>
+                  </span>
+                </ul>
+              </nav>
               <div class="hamburger">
                 <button class="hamburger-toggle">
                   <span class="bar-top"></span>
@@ -199,13 +258,6 @@
                       >
                     </div>
                   </div>
-
-                  <!-- <div class="container-overlay-5">
-                           <i class="fas fa-language fa-2x"></i>
-                           <div class="overlay">
-                              <span class="overlay__text overlay__text--modifier">Français, Anglais, Indonésien</span>
-                           </div>
-                          </div> -->
                 </div>
               </div>
             </div>

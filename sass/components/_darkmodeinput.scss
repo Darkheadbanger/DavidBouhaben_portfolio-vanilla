@@ -1,55 +1,21 @@
 .nav {
+  display: none;
   @include media("dekstop") {
+    display: block;
+    @include darkmode;
     .darkmode {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      margin: 0 0 15px 0;
-      &__police {
-        font-size: medium;
-      }
-      .toggle {
-        display: none;
-      }
+      color: $colour-text-light;
       .toggleBtn {
         border: 3px solid #9e9191;
-        border-radius: 16px;
-        align-self: center;
-        cursor: pointer;
-        display: block;
-        width: 70px;
-        height: 30px;
-        outline: 0;
-        user-select: none;
-        transition: 0.4s;
         &::before {
-          left: 1%;
           background-color: #9e9191;
-          content: "";
-          border-radius: 16px;
-          width: 50%;
-          overflow: hidden;
-          height: 93%;
-          position: relative;
-          display: block;
-          margin: 1px 0 0 0;
-          cursor: pointer;
         }
       }
-      input {
-        &:checked + .toggleBtn {
-          background-color: #1e2a3a;
-          border: 3px solid #6c51a4;
-        }
-        &:checked + .toggleBtn::before {
-          animation: darkmode-active 0.4s ease-in-out 0s 1 normal forwards;
-          margin: 1px 0 0px -2px;
-          background-color: #6c51a4;
-        }
-        &:not(:checked) + .toggleBtn::before {
-          animation: darkmode-desactive 0.4s ease-in-out 0s 1 normal forwards;
-        }
-      }
+      @include darkmode-animation;
     }
   }
+}
+
+.nav-desktop {
+  @include darkmode;
 }

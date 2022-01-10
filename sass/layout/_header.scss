@@ -92,102 +92,8 @@
           }
         }
       }
-      // Mécanisme overlay hover
-      // @include overlayTech;
-      // .overlay {
-      //   height: 2.7em;
-      //   left: 7.5vh;
-      //   top: 50vh;
-      //   width: 2.6em;
-      // }
-      // }
-      // }
-      // .container-overlay-2 {
-      //   @include media(mobile) {
-      //     .overlay {
-      //       display: none;
-
-      //       &__text {
-      //         font-size: medium;
-      //         margin: 0px 0px 0 -10px;
-      //         &--modifier {
-      //           color: white;
-      //         }
-      //       }
-      //     }
-      //     //   @include overlayTech;
-      //     //   .overlay {
-      //     //     height: 2.7em;
-      //     //     width: 2.5em;
-      //     //     top: 50vh;
-      //     //     left: 17.5vh;
-      //     //   }
-      //   }
-      // }
-      // .container-overlay-3 {
-      //   @include media(mobile) {
-      //     .overlay {
-      //       display: none;
-
-      //       &__text {
-      //         font-size: medium;
-      //         margin: 0 0px 0 -8px;
-      //         &--modifier {
-      //           color: white;
-      //         }
-      //       }
-      //     }
-      //     // @include overlayTech;
-      //     // .overlay {
-      //     //   height: 2.7em;
-      //     //   width: 2.5em;
-      //     //   top: 50vh;
-      //     //   left: 26.45vh;
-      //     //   &__text {
-      //     //     left: 6% !important;
-      //     //   }
-      //     // }
-      //   }
-      // }
-      // .container-overlay-4 {
-      //   @include media(mobile) {
-      //     .overlay {
-      //       display: none;
-
-      //       &__text {
-      //         font-size: medium;
-      //         margin: 0 0px 0 -8px;
-      //         &--modifier {
-      //           color: white;
-      //         }
-      //       }
-      //     }
-      // @include overlayTech;
-      // .overlay {
-      //   height: 2.7em;
-      //   width: 2.5em;
-      //   top: 50vh;
-      //   left: 34.8vh;
-      //   &__text {
-      //     left: 6%;
-      //   }
-      // }
     }
   }
-  // .container-overlay-5 {
-  //   @include media(mobile) {
-  //     @include overlayTech;
-  //     .overlay {
-  //       height: 2.7em;
-  //       width: 2.5em;
-  //       top: 52vh;
-  //       left: 35.4vh;
-  //       &__text {
-  //         left: 15%;
-  //       }
-  //     }
-  //   }
-  // }
 
   &__nav {
     box-shadow: none !important;
@@ -210,7 +116,7 @@
       }
     }
 
-    .nav {
+    .top {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -218,15 +124,28 @@
       bottom: 10%;
       // border: 1px solid blue;
       &__logo {
-        height: auto;
-        text-align: center;
+        @include media("desktop") {
+          height: auto;
+          text-align: center;
+        }
+        margin: 22px 0 0 0;
       }
       &--modifier {
         z-index: 99;
       }
+      a {
+        .logo-img {
+          height: 100%;
+          width: 100px;
+          margin: 0px 0px -2px 0;
+          z-index: 99;
+        }
+      }
       img {
-        height: 100%;
-        width: 100px;
+        // height: 100%;
+        // width: 100px;
+        width: 20px; // Pour le drapeau, je ne comprend pas
+        height: auto;
         z-index: 99;
       }
     }

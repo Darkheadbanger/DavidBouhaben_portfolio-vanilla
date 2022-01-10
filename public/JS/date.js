@@ -2,6 +2,7 @@ window.addEventListener("load", () => {
   // Array pournom de jours
   let date = new Date();
   let jour = date.getDate();
+  let jourNom = date.getDay();
   console.log(jour);
   let mois = date.getMonth();
   let annee = date.getFullYear();
@@ -16,7 +17,7 @@ window.addEventListener("load", () => {
   ];
 
   const moisNoms = [
-    "janvier",
+    "janvier", //0
     "février",
     "mars",
     "avril",
@@ -30,8 +31,8 @@ window.addEventListener("load", () => {
     "décembre",
   ];
 
-  let nomMois = moisNoms[mois];
-  let nomJour = joursNoms[jour];
+  let nomMois = moisNoms[mois]; //dans le tableau moisNoms, on nrécupère (a partir de 0) le getmonth récupéré depuis newDate
+  let nomJour = joursNoms[jourNom];
 
   let currentTime = document.querySelector(".currentTime");
   currentTime.innerHTML = nomJour + ", " + jour + " " + nomMois + " " + annee;

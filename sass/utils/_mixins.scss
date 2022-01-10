@@ -78,6 +78,9 @@
   height: 100%;
   position: fixed;
   width: 100%;
+}
+
+@mixin nav {
   .nav {
     display: block;
     position: absolute;
@@ -100,13 +103,16 @@
         &:last-child {
           border-bottom: 0;
         }
-        &:nth-last-child(3) {
+        &:nth-last-child(2) {
           border-bottom: 0;
           background-color: $coulour-lang;
           border-radius: 5%;
         }
+        &:nth-last-child(3) {
+          border-bottom: 1px solid #7a7a7a;
+        }
         &:nth-last-child(4) {
-          border-bottom: 0;
+          border-bottom: 1px solid #7a7a7a;
         }
         .nav__link {
           color: $colour-text-light;
@@ -120,7 +126,47 @@
   }
 }
 
+@mixin nav-desktop {
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    .li {
+      &:first-child {
+        background-color: $coulour-bacground-link-active;
+        border-radius: 10%;
+      }
+    }
+    .a {
+      // Version desktop
+      background-color: $coulour-lang;
+      border-radius: 10%;
+    }
+    li {
+      padding: 15px;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &:nth-last-child(2) {
+        border-bottom: 0;
+        background-color: $coulour-lang;
+        border-radius: 5%;
+      }
+      &:nth-last-child(4) {
+        border-bottom: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $colour-text-light;
+    }
+  }
+}
+
 @mixin drapeaulangue {
+  // display: block;
   img {
     width: 6%;
     height: auto;
@@ -152,6 +198,61 @@
       &--modifier {
         color: black;
       }
+    }
+  }
+}
+
+@mixin darkmode {
+  .darkmode {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 0 15px 0;
+    &__police {
+      font-size: medium;
+    }
+    .toggle {
+      display: none;
+    }
+    .toggleBtn {
+      border-radius: 16px;
+      align-self: center;
+      cursor: pointer;
+      display: block;
+      width: 70px;
+      height: 30px;
+      outline: 0;
+      user-select: none;
+      transition: 0.4s;
+      &::before {
+        left: 1%;
+        content: "";
+        border-radius: 16px;
+        width: 50%;
+        overflow: hidden;
+        height: 93%;
+        position: relative;
+        display: block;
+        margin: 1px 0 0 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@mixin darkmode-animation {
+  input {
+    &:checked + .toggleBtn {
+      background-color: #1e2a3a;
+      border: 3px solid #6c51a4;
+    }
+    &:checked + .toggleBtn::before {
+      animation: darkmode-active 0.4s ease-in-out 0s 1 normal forwards;
+      margin: 1px 0 0px -2px;
+      background-color: #6c51a4;
+    }
+    &:not(:checked) + .toggleBtn::before {
+      animation: darkmode-desactive 0.4s ease-in-out 0s 1 normal forwards;
     }
   }
 }
