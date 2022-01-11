@@ -79,16 +79,28 @@
     @include media("dekstop") {
       display: flex;
       flex-direction: column;
-      span {
+    }
+    span {
+      display: block;
+      @include media("dekstop") {
+        // display: block;
         font-size: medium;
       }
-      .overlay {
+    }
+
+    .overlay {
+      display: flex;
+      flex-direction: column;
+      span {
         display: none;
-        &__text {
-          font-size: medium;
-          margin: 0 0px 0 -8px;
-          &--modifier {
-            color: white;
+        @include media("dekstop") {
+          display: none;
+          &__text {
+            font-size: medium;
+            margin: 0 0px 0 -8px;
+            &--modifier {
+              color: white;
+            }
           }
         }
       }
@@ -114,6 +126,15 @@
           color: white;
         }
       }
+      .heureCol {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
     }
 
     .top {
@@ -128,7 +149,7 @@
           height: auto;
           text-align: center;
         }
-        margin: 22px 0 0 0;
+        margin: -5px 0 0 0;
       }
       &--modifier {
         z-index: 99;

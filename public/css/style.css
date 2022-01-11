@@ -9342,17 +9342,31 @@ button {
     display: flex;
     flex-direction: column;
   }
+}
+.container-header .container-overlay span {
+  display: block;
+}
+@media (max-width: 1024.98px) {
   .container-header .container-overlay span {
     font-size: medium;
   }
-  .container-header .container-overlay .overlay {
+}
+.container-header .container-overlay .overlay {
+  display: flex;
+  flex-direction: column;
+}
+.container-header .container-overlay .overlay span {
+  display: none;
+}
+@media (max-width: 1024.98px) {
+  .container-header .container-overlay .overlay span {
     display: none;
   }
-  .container-header .container-overlay .overlay__text {
+  .container-header .container-overlay .overlay span__text {
     font-size: medium;
     margin: 0 0px 0 -8px;
   }
-  .container-header .container-overlay .overlay__text--modifier {
+  .container-header .container-overlay .overlay span__text--modifier {
     color: white;
   }
 }
@@ -9376,6 +9390,15 @@ button {
 .container-header__nav .currentTime__element--modifier {
   color: white;
 }
+.container-header__nav .currentTime .heureCol {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .container-header__nav .top {
   display: flex;
   align-items: center;
@@ -9384,7 +9407,7 @@ button {
   bottom: 10%;
 }
 .container-header__nav .top__logo {
-  margin: 22px 0 0 0;
+  margin: -5px 0 0 0;
 }
 @media (max-width: ) {
   .container-header__nav .top__logo {
@@ -9623,9 +9646,6 @@ button {
 .nav-desktop ul a {
   text-decoration: none;
   color: #3bc1b0;
-}
-.nav-desktop .a {
-  width: 62vh;
 }
 .nav-desktop ul .icon {
   margin: 0 5px 2px 0px;

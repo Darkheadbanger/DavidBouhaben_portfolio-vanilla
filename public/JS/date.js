@@ -1,11 +1,16 @@
 window.addEventListener("load", () => {
   // Array pournom de jours
   let date = new Date();
+  console.log(date);
+
   let jour = date.getDate();
   let jourNom = date.getDay();
   console.log(jour);
   let mois = date.getMonth();
   let annee = date.getFullYear();
+  let heure = date.getHours();
+  let minute = date.getMinutes();
+  // let second = date.getSeconds();
   const joursNoms = [
     "Dimanche", //0
     "Lundi",
@@ -34,6 +39,12 @@ window.addEventListener("load", () => {
   let nomMois = moisNoms[mois]; //dans le tableau moisNoms, on nrécupère (a partir de 0) le getmonth récupéré depuis newDate
   let nomJour = joursNoms[jourNom];
 
+  // let utcShort = { timeZone: "UTC", timeZoneName: "short" };
+  // let GMT = date.toLocaleTimeString("fr", utcShort);
+  // 
   let currentTime = document.querySelector(".currentTime");
-  currentTime.innerHTML = nomJour + ", " + jour + " " + nomMois + " " + annee;
+  currentTime.innerHTML =
+    "<div class='heureCol'>" +
+    `<span>${heure}:${minute} GMT</span>` +
+    `<span> ${nomJour} ${jour} ${nomMois} ${annee}</span>`;
 });

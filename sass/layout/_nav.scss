@@ -87,9 +87,6 @@
   }
   display: block;
   @include nav-desktop;
-  .a {
-    width: 62vh;
-  }
   ul {
     .icon {
       margin: 0 5px 2px 0px;
@@ -97,7 +94,8 @@
   }
 }
 
-.image { // dreapeau france nav
+.image {
+  // dreapeau france nav
   width: 6%;
 }
 // Nav IconList
