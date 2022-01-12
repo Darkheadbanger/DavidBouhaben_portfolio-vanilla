@@ -11,7 +11,7 @@
   &__background {
     width: 100%;
     height: auto;
-    background-color: #00000080;
+    background-color: #00000094;
   }
   &__info {
     // border: 1px solid violet;
@@ -71,6 +71,10 @@
         &--modifier {
           color: #f0f0f0;
         }
+      }
+      .container-overlay {
+        display: flex;
+        flex-direction: column;
       }
     }
   }

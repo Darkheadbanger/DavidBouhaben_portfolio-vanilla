@@ -1,32 +1,9 @@
 .nav {
-  display: none;
-  @include media("dekstop") {
-    display: block;
-    @include darkmode;
-    .darkmode {
-      color: $colour-text-light;
-      .toggleBtn {
-        border: 3px solid #9e9191;
-        &::before {
-          background-color: #9e9191;
-        }
-      }
-      @include darkmode-animation;
-    }
-  }
+  @include darkmode;
+  @include darkmode-animation;
 }
 
 .nav-desktop {
-  display: block;
   @include darkmode;
-  .darkmode {
-    color: $colour-text-light;
-    .toggleBtn {
-      border: 3px solid #9e9191;
-      &::before {
-        background-color: #9e9191;
-      }
-    }
-    @include darkmode-animation;
-  }
+  @include darkmode-animation;
 }
