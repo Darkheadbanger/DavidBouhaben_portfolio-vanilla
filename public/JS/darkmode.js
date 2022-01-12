@@ -3,7 +3,7 @@
   let bodyId = document.getElementById("bodyId");
   let darkmodeTextSombre = document.getElementById("darkmode-Text");
   let darkmodeTextClaire = document.getElementById("darkmode-Text");
-
+ 
   function darkmode() {
     console.log("darkmode entrée");
     // checked == true
