@@ -8957,7 +8957,7 @@ body {
   background: white;
 }
 
-.bodyId {
+.bodyDark {
   background-color: black;
 }
 
@@ -9188,6 +9188,14 @@ button {
 .nav input:not(:checked) + .toggleBtn::before {
   animation: darkmode-desactive 0.4s ease-in-out 0s 1 normal forwards;
 }
+.nav .sombre {
+  color: black;
+  margin: 0 5px 0px 0px;
+}
+.nav .claire {
+  color: #b4b400;
+  margin: 0 5px 0px 0px;
+}
 
 .nav-desktop .darkmode {
   display: flex;
@@ -9238,6 +9246,14 @@ button {
 }
 .nav-desktop input:not(:checked) + .toggleBtn::before {
   animation: darkmode-desactive 0.4s ease-in-out 0s 1 normal forwards;
+}
+.nav-desktop .sombre {
+  color: black;
+  margin: 0 5px 0px 0px;
+}
+.nav-desktop .claire {
+  color: #b4b400;
+  margin: 0 5px 0px 0px;
 }
 
 .container-header {
@@ -9427,18 +9443,6 @@ button {
   }
 }
 @media (max-width: 1024.98px) {
-  .nav .nav .sombre {
-    color: black;
-    margin: 0 5px 0px 0px;
-  }
-}
-@media (max-width: 1024.98px) {
-  .nav .nav .claire {
-    color: #b4b400;
-    margin: 0 5px 0px 0px;
-  }
-}
-@media (max-width: 1024.98px) {
   .nav .nav ul {
     display: inline-block;
     text-align: center;
@@ -9499,18 +9503,6 @@ button {
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav-open .nav {
     top: 23%;
-  }
-}
-@media (max-width: 1024.98px) {
-  .nav-open .nav .sombre {
-    color: black;
-    margin: 0 5px 0px 0px;
-  }
-}
-@media (max-width: 1024.98px) {
-  .nav-open .nav .claire {
-    color: #b4b400;
-    margin: 0 5px 0px 0px;
   }
 }
 @media (max-width: 1024.98px) {
@@ -9592,18 +9584,6 @@ button {
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav-close .nav {
     top: 23%;
-  }
-}
-@media (max-width: 1024.98px) {
-  .nav-close .nav .sombre {
-    color: black;
-    margin: 0 5px 0px 0px;
-  }
-}
-@media (max-width: 1024.98px) {
-  .nav-close .nav .claire {
-    color: #b4b400;
-    margin: 0 5px 0px 0px;
   }
 }
 @media (max-width: 1024.98px) {

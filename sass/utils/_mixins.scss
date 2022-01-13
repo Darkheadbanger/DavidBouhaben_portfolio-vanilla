@@ -71,6 +71,19 @@
   }
 }
 
+// Lamp animation
+
+@mixin lamp {
+  .sombre {
+    color: black;
+    margin: 0 5px 0px 0px;
+  }
+  .claire {
+    color: #b4b400;
+    margin: 0 5px 0px 0px;
+  }
+}
+
 // Le nav pour open et close
 
 @mixin navOpenClose {
@@ -88,14 +101,7 @@
     @include media("tablet") {
       top: 23%;
     }
-    .sombre {
-      color: black;
-      margin: 0 5px 0px 0px;
-    }
-    .claire {
-      color: #b4b400;
-      margin: 0 5px 0px 0px;
-    }
+    
     ul {
       display: inline-block;
       text-align: center;
@@ -244,11 +250,10 @@
       font-size: medium;
     }
     .toggle {
-      display: none; 
+      display: none;
     }
     .toggleBtn {
       border: 3px solid #9e9191;
-
       border-radius: 16px;
       align-self: center;
       cursor: pointer;

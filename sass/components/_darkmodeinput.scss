@@ -1,9 +1,11 @@
 .nav {
   @include darkmode;
   @include darkmode-animation;
+  @include lamp;
 }
 
 .nav-desktop {
   @include darkmode;
   @include darkmode-animation;
+  @include lamp;
 }

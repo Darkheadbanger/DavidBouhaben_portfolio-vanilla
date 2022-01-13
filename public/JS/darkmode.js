@@ -1,28 +1,26 @@
 (() => {
-  let checkbox = document.getElementById("darkmode", "darkmode-desktop");
+  let checkbox = document.getElementById("darkmode");
   let bodyId = document.getElementById("bodyId");
   let darkmodeTextSombre = document.getElementById("darkmode-Text");
   let darkmodeTextClaire = document.getElementById("darkmode-Text");
- 
+
+
   function darkmode() {
     console.log("darkmode entrée");
     // checked == true
     if (checkbox.checked) {
-      console.log("checkedbox", checkbox.checked);
-      console.log(checkbox.checked);
-      let addBody = bodyId.classList.add("bodyId");
-      console.log("addBody", addBody);
-      let iChange =
-        (darkmodeTextSombre.innerHTML = `<i class="fas fa-lightbulb sombre"></i>Mode sombre`);
-      console.log("iChangeSombre", iChange);
+      // darkmodePc();
+      bodyId.classList.add("bodyDark");
+      darkmodeTextSombre.innerHTML = `<i class="fas fa-lightbulb sombre"></i>Mode sombre`;
+      // bodyDarkPc.classList.add("bodyDark");
+      // darkmodeTextSombrePc.innerHTML = `<i class="fas fa-lightbulb sombre"></i>Mode sombre`;
     } else {
-      let removeBody = bodyId.classList.remove("bodyId");
-      console.log("iChangeClaire", removeBody);
-      let iChange =
-        (darkmodeTextClaire.innerHTML = `<i class="far fa-lightbulb claire"></i>Mode claire`);
-      console.log("iChangeClaire", iChange);
+      bodyId.classList.remove("bodyDark");
+      darkmodeTextClaire.innerHTML = `<i class="far fa-lightbulb claire"></i>Mode claire`;
+      // bodyDarkPc.classList.remove("bodyDark");
+      // darkmodeTextClairePc.innerHTML = `<i class="far fa-lightbulb claire"></i>Mode claire`;
     }
   }
-  let clickedDarkmode = checkbox.addEventListener("click", darkmode);
-  console.log("clickedDarkmode", clickedDarkmode);
+  checkbox.addEventListener("click", darkmode);
+
 })();
