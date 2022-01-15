@@ -93,6 +93,13 @@
   width: 100%;
 }
 
+@mixin vertical {
+  .vl {
+    border-left: 6px solid green;
+    height: 10px;
+  }
+}
+
 @mixin nav {
   .nav {
     display: block;
@@ -101,14 +108,24 @@
     @include media("tablet") {
       top: 23%;
     }
-    
     ul {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
       text-align: center;
+      list-style: none;
+      text-transform: uppercase;
+      font-size: initial;
+      font-weight: inherit;
       .li {
         &:first-child {
           background-color: $coulour-bacground-link-active;
-          border-radius: 5%;
+          border-radius: 10%;
+          transition: all 0.3s;
+          position: relative;
+          &:active {
+            top: 4px;
+          }
         }
       }
       li {
@@ -126,7 +143,7 @@
           border-radius: 5%;
         }
         &:nth-last-child(3) {
-          border-bottom: 1px solid #7a7a7a;
+          border-bottom: 0;
         }
         &:nth-last-child(4) {
           border-bottom: 1px solid #7a7a7a;
@@ -152,6 +169,9 @@
     align-items: center;
     flex-wrap: wrap;
     list-style: none;
+    text-transform: uppercase;
+    font-size: initial;
+    font-weight: inherit;
     .icon {
       margin: 0 5px 2px 0px;
     }
@@ -159,6 +179,15 @@
       &:first-child {
         background-color: $coulour-bacground-link-active;
         border-radius: 10%;
+        transition: all 0.3s;
+        position: relative;
+        opacity: 0.7;
+        &:active {
+          top: 2px;
+        }
+        &:hover {
+          background-color: $coulour-bacground-link-active-hover;
+        }
       }
     }
     .a {
@@ -169,6 +198,13 @@
     li {
       cursor: pointer;
       padding: 15px;
+      text-transform: uppercase;
+      font-size: initial;
+      font-stretch: extra-expanded;
+      font-weight: inherit;
+
+      @include vertical;
+
       &:last-child {
         border-bottom: 0;
         color: $colour-text-active;
@@ -176,7 +212,16 @@
       &:nth-last-child(2) {
         border-bottom: 0;
         background-color: $coulour-lang;
-        border-radius: 5%;
+        border-radius: 10%;
+        transition: all 0.3s;
+        position: relative;
+        opacity: 0.8;
+        &:hover {
+          background-color: $coulour-lang-hover;
+        }
+        &:active {
+          top: 2px;
+        }
       }
       &:nth-last-child(4) {
         border-bottom: 0;
@@ -207,6 +252,9 @@
     width: 6%;
     height: auto;
     margin: 0px 6px -5px 0px;
+    @include media("dekstop") {
+      margin: 0px 6px -3px 0px;
+    }
   }
 }
 
@@ -261,13 +309,11 @@
       width: 70px;
       height: 30px;
       outline: 0;
-      user-select: none;
       transition: 0.4s;
       &::before {
-        background-color: #9e9191;
-
-        left: 1%;
         content: "";
+        background-color: #9e9191;
+        left: 1%;
         border-radius: 16px;
         width: 50%;
         overflow: hidden;
@@ -283,17 +329,27 @@
 
 @mixin darkmode-animation {
   input {
+    // animation: darkmode-active 0.4s ease-in-out 0s 1 normal forwards;
     &:checked + .toggleBtn {
       background-color: #1e2a3a;
       border: 3px solid #6c51a4;
     }
-    &:checked + .toggleBtn::before {
-      animation: darkmode-active 0.4s ease-in-out 0s 1 normal forwards;
-      margin: 1px 0 0px -2px;
-      background-color: #6c51a4;
+    &:checked + .toggleBtn {
+      &::before {
+        // animation: darkmode-active 0.4s ease-in-out 0s 1 normal forwards;
+        margin: 1px 0 0px -2px;
+        background-color: #6c51a4;
+        transition: 0.4s;
+        transform: translateX(100%);
+      }
     }
-    &:not(:checked) + .toggleBtn::before {
-      animation: darkmode-desactive 0.4s ease-in-out 0s 1 normal forwards;
+
+    &:not(:checked) + .toggleBtn {
+      &::before {
+        // animation: darkmode-desactive 0.4s ease-in-out 0s 1 normal forwards;
+        transition: 0.4s;
+        transform: translateX(0%);
+      }
     }
   }
 }

@@ -63,8 +63,7 @@
     display: none;
   }
   display: block;
-  @include nav-desktop;
-  
+  @include nav-desktop; // .nav-desktop ul li
 }
 
 .image {
@@ -76,7 +75,7 @@
 .reseaux-sociaux {
   width: 100%;
   height: auto;
-  margin: -5vh 0px 5vh 2px;
+  margin: -5vh 0px 5vh 0;
   ul {
     list-style: none;
     display: flex;

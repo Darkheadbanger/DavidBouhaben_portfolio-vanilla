@@ -19,27 +19,31 @@
   }
 }
 // Animation pour ballayage de nav pour ouvrir le nav
-@keyframes nav--open {
-  100% {
-    left: 0;
-    z-index: 1;
+@if (false) {
+  @keyframes nav--open {
+    100% {
+      left: 0;
+      z-index: 1;
+    }
+    0% {
+      left: 100%;
+      z-index: 1;
+    }
   }
-  0% {
-    left: 100%;
-    z-index: 1;
+} @else {
+  @keyframes nav--close {
+    100% {
+      left: 100%;
+      z-index: 1;
+    }
+    0% {
+      left: 0%;
+      z-index: 1;
+    }
   }
 }
+
 // Animation pour ballayage de nav pour fermer le nav
-@keyframes nav--close {
-  100% {
-    left: 100%;
-    z-index: 1;
-  }
-  0% {
-    left: 0%;
-    z-index: 1;
-  }
-}
 
 @keyframes menu {
   0% {
@@ -53,23 +57,5 @@
   }
   100% {
     left: 2.5%;
-  }
-}
-
-@keyframes darkmode-active {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@keyframes darkmode-desactive {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
   }
 }
