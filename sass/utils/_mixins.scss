@@ -152,7 +152,7 @@
           color: $colour-text-light;
           text-decoration: none;
           &--active {
-            color: $colour-text-active;
+            color: $colour-text;
           }
         }
       }
@@ -207,7 +207,7 @@
 
       &:last-child {
         border-bottom: 0;
-        color: $colour-text-active;
+        color: $colour-text;
       }
       &:nth-last-child(2) {
         border-bottom: 0;
@@ -230,7 +230,7 @@
         color: $colour-text-light;
         text-decoration: none;
         &--active {
-          color: $colour-text-active;
+          color: $colour-text;
         }
       }
     }

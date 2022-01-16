@@ -1,5 +1,7 @@
 .container-header {
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
   height: auto;
   background: url(../../public/image/coffee-header.jpg);
   // position: fixed;
@@ -35,16 +37,17 @@
           color: #ffffff;
         }
         h1 {
-          margin: 0 0 0 -2px;
-          @include media("mobile") {
+          margin: 0 0 0 -5px;
+          font-size: 40pt;
+          @include media(dekstop) {
             font-size: 23.4pt;
           }
         }
         h2 {
           margin: -10px 0px 0px 0;
-          font-size: medium;
-          color: #dadada;
-          @include media(mobile) {
+          font-size: 15pt;
+          color: $colour-text-light;
+          @include media(dekstop) {
             font-size: medium;
           }
         }
@@ -55,9 +58,11 @@
       flex-direction: column;
       flex-wrap: wrap;
       &__element {
-        font-size: small;
-        margin: 0px 0px 5vh 2px;
-        // height: 5hv;
+        @include media(dekstop) {
+          font-size: small;
+        }
+        font-size: medium;
+        padding: 0 0vw 3vw 0;
         &--modifier {
           color: #dadada;
         }
@@ -69,8 +74,8 @@
       .tech {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 0 0 20vh 0;
+        justify-content: space-around;
+        margin: 0 0 6.5vw 0;
         &--modifier {
           color: #f0f0f0;
         }
@@ -98,22 +103,40 @@
       @include media(dekstop) {
         display: none;
       }
+      cursor: default;
       display: flex;
       flex-direction: column;
-      // opacity: 0.5;
-      // background-color: blue;
       &__text {
         font-size: medium;
-        // margin: -7vh 0 30px 18px;
-        // height: auto;
-        // width: 12vh;
         &--modifier {
           color: white;
         }
       }
-      // p {
-      //   margin: 0px 0px 0px 15px;
-      // }
+    }
+  }
+
+  .container-down {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    .down {
+      &__element {
+        &--modifier {
+          color: white;
+        }
+      }
+      .icon-bottom {
+        animation: UpDown 1s linear infinite;
+      }
+    }
+    &__element {
+      top: 63rem;
+      bottom: 0;
+      left: 0vh;
+      right: 0;
+      &--modifier {
+        color: white;
+      }
     }
   }
 

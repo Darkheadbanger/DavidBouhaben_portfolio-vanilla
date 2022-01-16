@@ -86,10 +86,17 @@
       margin: 0px 15px 0px 0px;
     }
     a {
-      background-color: #ba8c63;
-      color: white;
-      padding: 0px 10px;
+      background-color: $button-header;
+      color: $colour-text;
+      padding: 5px 15px;
       display: inline-block;
+      border-radius: 10%;
+      @include media("dekstop") {
+        padding: 0px 10px;
+      }
+      &:hover {
+        background-color: $button-header-hover;
+      }
     }
   }
 }

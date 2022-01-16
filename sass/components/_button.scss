@@ -1,0 +1,70 @@
+.container-portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  .btn {
+    border: none;
+    font-size: inherit;
+    position: relative;
+    padding: 25px 60px;
+    border-radius: 10rem;
+    &:after {
+      content: "";
+      position: absolute;
+      transition: all 0.3s;
+    }
+    &__element {
+      background: $button-header;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      overflow: hidden;
+      &:hover {
+        background: $button-header-hover;
+      }
+      &:active {
+        top: 2px;
+      }
+      &::before {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        line-height: 3;
+        font-size: 140%;
+        width: 60px;
+      }
+      &--modifier {
+        color: #fff;
+      }
+    }
+    .icon-portfolio {
+      position: absolute;
+      top: 27px;
+      bottom: 0;
+      left: 24px;
+      right: 0;
+    }
+    .icon-cv {
+      position: absolute;
+      top: 27px;
+      bottom: 0;
+      left: 24px;
+      right: 0;
+    }
+    .icon-arrow {
+      position: absolute;
+      top: 27px;
+      bottom: 0;
+      left: 31rem;
+      right: 0;
+    }
+    .icon-download {
+      position: absolute;
+      top: 27px;
+      bottom: 0;
+      left: 27.5rem;
+      right: 0;
+    }
+  }
+}

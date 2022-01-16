@@ -40,6 +40,17 @@
     left: 2.5%;
   }
 }
+@keyframes UpDown {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 1em;
+  }
+  100% {
+    bottom: 0;
+  }
+}
 /*!
  * Font Awesome Free 6.0.0-beta3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -9237,8 +9248,81 @@ button {
   margin: 0 5px 0px 0px;
 }
 
+.container-portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.container-portfolio .btn {
+  border: none;
+  font-size: inherit;
+  position: relative;
+  padding: 25px 60px;
+  border-radius: 10rem;
+}
+.container-portfolio .btn:after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s;
+}
+.container-portfolio .btn__element {
+  background: #ba8c63;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.container-portfolio .btn__element:hover {
+  background: #9e7653;
+}
+.container-portfolio .btn__element:active {
+  top: 2px;
+}
+.container-portfolio .btn__element::before {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 3;
+  font-size: 140%;
+  width: 60px;
+}
+.container-portfolio .btn__element--modifier {
+  color: #fff;
+}
+.container-portfolio .btn .icon-portfolio {
+  position: absolute;
+  top: 27px;
+  bottom: 0;
+  left: 24px;
+  right: 0;
+}
+.container-portfolio .btn .icon-cv {
+  position: absolute;
+  top: 27px;
+  bottom: 0;
+  left: 24px;
+  right: 0;
+}
+.container-portfolio .btn .icon-arrow {
+  position: absolute;
+  top: 27px;
+  bottom: 0;
+  left: 31rem;
+  right: 0;
+}
+.container-portfolio .btn .icon-download {
+  position: absolute;
+  top: 27px;
+  bottom: 0;
+  left: 27.5rem;
+  right: 0;
+}
+
 .container-header {
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
   height: auto;
   background: url(../../public/image/coffee-header.jpg);
   background-position: center;
@@ -9273,19 +9357,20 @@ button {
   color: #ffffff;
 }
 .container-header__info .container-information__info h1 {
-  margin: 0 0 0 -2px;
+  margin: 0 0 0 -5px;
+  font-size: 40pt;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 1024.98px) {
   .container-header__info .container-information__info h1 {
     font-size: 23.4pt;
   }
 }
 .container-header__info .container-information__info h2 {
   margin: -10px 0px 0px 0;
-  font-size: medium;
-  color: #dadada;
+  font-size: 15pt;
+  color: #3bc1b0;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 1024.98px) {
   .container-header__info .container-information__info h2 {
     font-size: medium;
   }
@@ -9296,8 +9381,13 @@ button {
   flex-wrap: wrap;
 }
 .container-header__info .bio__element {
-  font-size: small;
-  margin: 0px 0px 5vh 2px;
+  font-size: medium;
+  padding: 0 0vw 3vw 0;
+}
+@media (max-width: 1024.98px) {
+  .container-header__info .bio__element {
+    font-size: small;
+  }
 }
 .container-header__info .bio__element--modifier {
   color: #dadada;
@@ -9309,8 +9399,8 @@ button {
 .container-header__info .bio .tech {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 0 0 20vh 0;
+  justify-content: space-around;
+  margin: 0 0 6.5vw 0;
 }
 .container-header__info .bio .tech--modifier {
   color: #f0f0f0;
@@ -9335,6 +9425,7 @@ button {
   }
 }
 .container-header .container-overlay .overlay {
+  cursor: default;
   display: flex;
   flex-direction: column;
 }
@@ -9347,6 +9438,26 @@ button {
   font-size: medium;
 }
 .container-header .container-overlay .overlay__text--modifier {
+  color: white;
+}
+.container-header .container-down {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+.container-header .container-down .down__element--modifier {
+  color: white;
+}
+.container-header .container-down .down .icon-bottom {
+  animation: UpDown 1s linear infinite;
+}
+.container-header .container-down__element {
+  top: 63rem;
+  bottom: 0;
+  left: 0vh;
+  right: 0;
+}
+.container-header .container-down__element--modifier {
   color: white;
 }
 .container-header__nav {
@@ -9789,8 +9900,17 @@ button {
 .reseaux-sociaux ul a {
   background-color: #ba8c63;
   color: white;
-  padding: 0px 10px;
+  padding: 5px 15px;
   display: inline-block;
+  border-radius: 10%;
+}
+@media (max-width: 1024.98px) {
+  .reseaux-sociaux ul a {
+    padding: 0px 10px;
+  }
+}
+.reseaux-sociaux ul a:hover {
+  background-color: #9e7653;
 }
 
 /*# sourceMappingURL=style.css.map */
