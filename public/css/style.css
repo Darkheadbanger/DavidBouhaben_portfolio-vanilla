@@ -45,7 +45,7 @@
     bottom: 0;
   }
   50% {
-    bottom: 1em;
+    bottom: 0.5em;
   }
   100% {
     bottom: 0;
@@ -9442,20 +9442,14 @@ button {
 }
 .container-header .container-down {
   display: flex;
-  position: absolute;
   justify-content: center;
 }
 .container-header .container-down .down__element--modifier {
   color: white;
 }
-.container-header .container-down .down .icon-bottom {
-  animation: UpDown 1s linear infinite;
-}
 .container-header .container-down__element {
-  top: 63rem;
-  bottom: 0;
-  left: 0vh;
-  right: 0;
+  position: relative;
+  animation: UpDown 1s linear infinite;
 }
 .container-header .container-down__element--modifier {
   color: white;

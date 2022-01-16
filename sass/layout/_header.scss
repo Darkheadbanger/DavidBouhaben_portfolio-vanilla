@@ -117,7 +117,7 @@
 
   .container-down {
     display: flex;
-    position: absolute;
+    // position: absolute;
     justify-content: center;
     .down {
       &__element {
@@ -125,15 +125,10 @@
           color: white;
         }
       }
-      .icon-bottom {
-        animation: UpDown 1s linear infinite;
-      }
     }
     &__element {
-      top: 63rem;
-      bottom: 0;
-      left: 0vh;
-      right: 0;
+      position: relative;
+      animation: UpDown 1s linear infinite;
       &--modifier {
         color: white;
       }
