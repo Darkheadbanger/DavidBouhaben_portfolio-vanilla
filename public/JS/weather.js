@@ -3,44 +3,52 @@ window.addEventListener("load", () => {
   let keyWeather = "514eb68bb2feadc6869bbd11dde4c5c3";
   let unit = "metric";
   let lang = "fr";
-  //   ipApi
-  //   let proxy = "https://cors-anywhere.herokuapp.com/";
-  //   let keyIp = "17cb1786a2a12deb27be3edee3b6936e";
-  //   let apiIp = `http://api.ipstack.com/check?access_key=${keyIp}`;
-  //   console.log(apiIp);
 
-  //   function foundLocationByIp() {
-  //     fetch(apiIp)
-  //       .then((response) => {
-  //         if (!response.ok) {
-  //           return Promise.reject(response);
-  //         } else {
-  //           return response.json();
-  //         }
-  //       })
-  //       .then((data) => {
-  //         console.log("Success");
-  //         console.log(data);
-  //       })
-  //       .catch((error) => {
-  //         if (typeof error.json === "function") {
-  //           error
-  //             .json()
-  //             .then((jsonError) => {
-  //               console.error("Json error from API openweathermap");
-  //               console.error(jsonError.message);
-  //             })
-  //             .catch((genericError) => {
-  //               console.log("Generic error from API");
-  //               console.error(genericError.message);
-  //             });
-  //         } else {
-  //           console.log("fetch error");
-  //           console.error(error.message);
-  //         }
-  //       });
-  //   }
-  //   foundLocationByIp();
+  // ipApi
+  let proxyHeroku = "https://cors-anywhere.herokuapp.com/";
+  // let keyIp = "17cb1786a2a12deb27be3edee3b6936e";
+  // let apiIp = `http://api.ipstack.com/check?access_key=${keyIp}`;
+
+  let apiIp = `https://www.cloudflare.com/cdn-cgi/trace`;
+  console.log(apiIp);
+
+  function foundLocationByIp() {
+    axios(apiIp, {
+      mode: "cors",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          return Promise.reject(response);
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        console.log("Success");
+        console.log(data);
+      })
+      .catch((error) => {
+        if (typeof error.json === "function") {
+          error
+            .json()
+            .then((jsonError) => {
+              console.error("Json error from API openweathermap");
+              console.error(jsonError.message);
+            })
+            .catch((genericError) => {
+              console.log("Generic error from API");
+              console.error(genericError.message);
+            });
+        } else {
+          console.log("fetch error");
+          console.error(error.message);
+        }
+      });
+  }
+  foundLocationByIp();
 
   function storeCoordinatesSucces(position) {
     console.log("Votre position actuelle est :");

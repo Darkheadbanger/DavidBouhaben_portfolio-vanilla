@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "axios": "^0.24.0",
     "flag-icon-css": "^4.1.7",
     "font-awesome": "^4.7.0",
     "include-media": "^1.4.10"
