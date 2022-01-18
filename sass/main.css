@@ -1,21 +1,62 @@
-@keyframes loading--spin {
+@-webkit-keyframes loading--spin {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
-@keyframes loading--exit {
+
+@keyframes loading--spin {
   from {
-    transform: scale(1);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loading--exit {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
   }
   to {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
     opacity: 0;
   }
 }
+
+@keyframes loading--exit {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes nav--close {
+  100% {
+    left: 100%;
+    z-index: 1;
+  }
+  0% {
+    left: 0%;
+    z-index: 1;
+  }
+}
+
 @keyframes nav--close {
   100% {
     left: 100%;
@@ -26,6 +67,22 @@
     z-index: 1;
   }
 }
+
+@-webkit-keyframes menu {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: -20%;
+  }
+  75% {
+    left: 20%;
+  }
+  100% {
+    left: 2.5%;
+  }
+}
+
 @keyframes menu {
   0% {
     left: 100%;
@@ -40,17 +97,31 @@
     left: 2.5%;
   }
 }
-@keyframes UpDown {
+
+@-webkit-keyframes UpDown {
   0% {
     bottom: 0;
   }
   50% {
-    bottom: 0.5em;
+    bottom: .5em;
   }
   100% {
     bottom: 0;
   }
 }
+
+@keyframes UpDown {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: .5em;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
 /*!
  * Font Awesome Free 6.0.0-beta3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -131,14 +202,14 @@
 
 .fa-xs {
   font-size: 0.75em;
-  line-height: 0.0833333337em;
+  line-height: 0.08333em;
   vertical-align: 0.125em;
 }
 
 .fa-sm {
   font-size: 0.875em;
-  line-height: 0.0714285718em;
-  vertical-align: 0.0535714295em;
+  line-height: 0.07143em;
+  vertical-align: 0.05357em;
 }
 
 .fa-lg {
@@ -149,7 +220,7 @@
 
 .fa-xl {
   font-size: 1.5em;
-  line-height: 0.0416666682em;
+  line-height: 0.04167em;
   vertical-align: -0.125em;
 }
 
@@ -169,6 +240,7 @@
   margin-left: var(--fa-li-margin, 2.5em);
   padding-left: 0;
 }
+
 .fa-ul > li {
   position: relative;
 }
@@ -200,48 +272,78 @@
 }
 
 .fa-beat {
-  animation-name: fa-beat;
-  animation-delay: var(--fa-animation-delay, 0);
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+  -webkit-animation-name: fa-beat;
+          animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
 }
 
 .fa-fade {
-  animation-name: fa-fade;
-  animation-delay: var(--fa-animation-delay, 0);
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+  -webkit-animation-name: fa-fade;
+          animation-name: fa-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
 }
 
 .fa-beat-fade {
-  animation-name: fa-beat-fade;
-  animation-delay: var(--fa-animation-delay, 0);
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+  -webkit-animation-name: fa-beat-fade;
+          animation-name: fa-beat-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
 }
 
 .fa-flip {
-  animation-name: fa-flip;
-  animation-delay: var(--fa-animation-delay, 0);
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+  -webkit-animation-name: fa-flip;
+          animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
 }
 
 .fa-spin {
-  animation-name: fa-spin;
-  animation-delay: var(--fa-animation-delay, 0);
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 2s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(--fa-animation-timing, linear);
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+          animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
 }
 
 .fa-spin-reverse {
@@ -250,91 +352,169 @@
 
 .fa-pulse,
 .fa-spin-pulse {
-  animation-name: fa-spin;
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(--fa-animation-timing, steps(8));
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+          animation-timing-function: var(--fa-animation-timing, steps(8));
 }
 
 @media (prefers-reduced-motion: reduce) {
   .fa-beat,
-.fa-fade,
-.fa-beat-fade,
-.fa-flip,
-.fa-pulse,
-.fa-spin,
-.fa-spin-pulse {
-    animation-delay: -1ms;
-    animation-duration: 1ms;
-    animation-iteration-count: 1;
-    transition-delay: 0s;
-    transition-duration: 0s;
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-spin,
+  .fa-spin-pulse {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
   }
 }
-@keyframes fa-beat {
+
+@-webkit-keyframes fa-beat {
   0%, 90% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   45% {
-    transform: scale(var(--fa-beat-scale, 1.25));
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
   }
 }
+
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+
 @keyframes fa-fade {
   50% {
     opacity: var(--fa-fade-opacity, 0.4);
   }
 }
-@keyframes fa-beat-fade {
+
+@-webkit-keyframes fa-beat-fade {
   0%, 100% {
     opacity: var(--fa-beat-fade-opacity, 0.4);
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   50% {
     opacity: 1;
-    transform: scale(var(--fa-beat-fade-scale, 1.125));
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
+
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+
 @keyframes fa-flip {
   50% {
-    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
   }
 }
-@keyframes fa-spin {
+
+@-webkit-keyframes fa-spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .fa-rotate-90 {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
-  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
-  transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
-  transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
 }
 
 .fa-flip-both,
 .fa-flip-horizontal.fa-flip-vertical {
-  transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
 }
 
 .fa-rotate-by {
-  transform: rotate(var(--fa-rotate-angle, none));
+  -webkit-transform: rotate(var(--fa-rotate-angle, none));
+          transform: rotate(var(--fa-rotate-angle, none));
 }
 
 .fa-stack {
@@ -370,47 +550,47 @@
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
 .fa-0::before {
-  content: "\30 ";
+  content: "\30";
 }
 
 .fa-1::before {
-  content: "\31 ";
+  content: "\31";
 }
 
 .fa-2::before {
-  content: "\32 ";
+  content: "\32";
 }
 
 .fa-3::before {
-  content: "\33 ";
+  content: "\33";
 }
 
 .fa-4::before {
-  content: "\34 ";
+  content: "\34";
 }
 
 .fa-5::before {
-  content: "\35 ";
+  content: "\35";
 }
 
 .fa-6::before {
-  content: "\36 ";
+  content: "\36";
 }
 
 .fa-7::before {
-  content: "\37 ";
+  content: "\37";
 }
 
 .fa-8::before {
-  content: "\38 ";
+  content: "\38";
 }
 
 .fa-9::before {
-  content: "\39 ";
+  content: "\39";
 }
 
 .fa-a::before {
-  content: "A";
+  content: "\41";
 }
 
 .fa-address-book::before {
@@ -826,11 +1006,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-asterisk::before {
-  content: "\*";
+  content: "\2a";
 }
 
 .fa-at::before {
-  content: "\@";
+  content: "\40";
 }
 
 .fa-atom::before {
@@ -850,7 +1030,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-b::before {
-  content: "B";
+  content: "\42";
 }
 
 .fa-baby::before {
@@ -1354,7 +1534,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-c::before {
-  content: "C";
+  content: "\43";
 }
 
 .fa-cake-candles::before {
@@ -2218,7 +2398,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-d::before {
-  content: "D";
+  content: "\44";
 }
 
 .fa-database::before {
@@ -2322,15 +2502,15 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-dollar-sign::before {
-  content: "\$";
+  content: "\24";
 }
 
 .fa-dollar::before {
-  content: "\$";
+  content: "\24";
 }
 
 .fa-usd::before {
-  content: "\$";
+  content: "\24";
 }
 
 .fa-dolly::before {
@@ -2430,7 +2610,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-e::before {
-  content: "E";
+  content: "\45";
 }
 
 .fa-ear-deaf::before {
@@ -2554,7 +2734,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-equals::before {
-  content: "\=";
+  content: "\3d";
 }
 
 .fa-eraser::before {
@@ -2578,7 +2758,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-exclamation::before {
-  content: "\!";
+  content: "\21";
 }
 
 .fa-expand::before {
@@ -2614,7 +2794,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-f::before {
-  content: "F";
+  content: "\46";
 }
 
 .fa-face-angry::before {
@@ -3214,7 +3394,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-g::before {
-  content: "G";
+  content: "\47";
 }
 
 .fa-gamepad::before {
@@ -3334,7 +3514,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-greater-than::before {
-  content: "\>";
+  content: "\3e";
 }
 
 .fa-greater-than-equal::before {
@@ -3374,7 +3554,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-h::before {
-  content: "H";
+  content: "\48";
 }
 
 .fa-hammer::before {
@@ -3578,7 +3758,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-hashtag::before {
-  content: "\#";
+  content: "\23";
 }
 
 .fa-hat-cowboy::before {
@@ -3834,7 +4014,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-i::before {
-  content: "I";
+  content: "\49";
 }
 
 .fa-i-cursor::before {
@@ -3934,7 +4114,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-j::before {
-  content: "J";
+  content: "\4a";
 }
 
 .fa-jedi::before {
@@ -3954,7 +4134,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-k::before {
-  content: "K";
+  content: "\4b";
 }
 
 .fa-kaaba::before {
@@ -3990,7 +4170,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-l::before {
-  content: "L";
+  content: "\4c";
 }
 
 .fa-landmark::before {
@@ -4046,7 +4226,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-less-than::before {
-  content: "\<";
+  content: "\3c";
 }
 
 .fa-less-than-equal::before {
@@ -4174,7 +4354,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-m::before {
-  content: "M";
+  content: "\4d";
 }
 
 .fa-magnet::before {
@@ -4506,7 +4686,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-n::before {
-  content: "N";
+  content: "\4e";
 }
 
 .fa-naira-sign::before {
@@ -4542,7 +4722,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-o::before {
-  content: "O";
+  content: "\4f";
 }
 
 .fa-object-group::before {
@@ -4574,7 +4754,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-p::before {
-  content: "P";
+  content: "\50";
 }
 
 .fa-pager::before {
@@ -4706,11 +4886,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-percent::before {
-  content: "\%";
+  content: "\25";
 }
 
 .fa-percentage::before {
-  content: "\%";
+  content: "\25";
 }
 
 .fa-person::before {
@@ -4910,11 +5090,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-plus::before {
-  content: "\+";
+  content: "\2b";
 }
 
 .fa-add::before {
-  content: "\+";
+  content: "\2b";
 }
 
 .fa-plus-minus::before {
@@ -4978,7 +5158,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-q::before {
-  content: "Q";
+  content: "\51";
 }
 
 .fa-qrcode::before {
@@ -4986,7 +5166,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-question::before {
-  content: "\?";
+  content: "\3f";
 }
 
 .fa-quote-left::before {
@@ -5006,7 +5186,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-r::before {
-  content: "R";
+  content: "\52";
 }
 
 .fa-radiation::before {
@@ -5242,7 +5422,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-s::before {
-  content: "S";
+  content: "\53";
 }
 
 .fa-sailboat::before {
@@ -5950,7 +6130,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-t::before {
-  content: "T";
+  content: "\54";
 }
 
 .fa-table::before {
@@ -6426,7 +6606,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-u::before {
-  content: "U";
+  content: "\55";
 }
 
 .fa-umbrella::before {
@@ -6646,7 +6826,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-v::before {
-  content: "V";
+  content: "\56";
 }
 
 .fa-van-shuttle::before {
@@ -6770,7 +6950,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-w::before {
-  content: "W";
+  content: "\57";
 }
 
 .fa-wallet::before {
@@ -6902,7 +7082,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-x::before {
-  content: "X";
+  content: "\58";
 }
 
 .fa-x-ray::before {
@@ -6930,7 +7110,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-y::before {
-  content: "Y";
+  content: "\59";
 }
 
 .fa-yen-sign::before {
@@ -6958,7 +7138,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-z::before {
-  content: "Z";
+  content: "\5a";
 }
 
 .sr-only,
@@ -6997,15 +7177,16 @@ readers do not read off random characters that represent icons */
 }
 
 @font-face {
-  font-family: "Font Awesome 6 Brands";
+  font-family: 'Font Awesome 6 Brands';
   font-style: normal;
   font-weight: 400;
   font-display: block;
   src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype");
 }
+
 .fab,
 .fa-brands {
-  font-family: "Font Awesome 6 Brands";
+  font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
 
@@ -8891,15 +9072,16 @@ readers do not read off random characters that represent icons */
 }
 
 @font-face {
-  font-family: "Font Awesome 6 Free";
+  font-family: 'Font Awesome 6 Free';
   font-style: normal;
   font-weight: 400;
   font-display: block;
   src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype");
 }
+
 .far,
 .fa-regular {
-  font-family: "Font Awesome 6 Free";
+  font-family: 'Font Awesome 6 Free';
   font-weight: 400;
 }
 
@@ -8913,15 +9095,16 @@ readers do not read off random characters that represent icons */
 }
 
 @font-face {
-  font-family: "Font Awesome 6 Free";
+  font-family: 'Font Awesome 6 Free';
   font-style: normal;
   font-weight: 900;
   font-display: block;
   src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype");
 }
+
 .fas,
 .fa-solid {
-  font-family: "Font Awesome 6 Free";
+  font-family: 'Font Awesome 6 Free';
   font-weight: 900;
 }
 
@@ -8930,7 +9113,8 @@ readers do not read off random characters that represent icons */
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
@@ -8938,7 +9122,8 @@ html {
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: white;
 }
 
@@ -8948,6 +9133,7 @@ body {
 
 .bodyLight {
   color: white;
+  -webkit-transition: background 0.6s ease;
   transition: background 0.6s ease;
 }
 
@@ -8988,6 +9174,7 @@ button {
 .hamburger {
   display: none;
 }
+
 @media (max-width: 1024.98px) {
   .hamburger {
     display: block;
@@ -9000,94 +9187,119 @@ button {
     cursor: pointer;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 1024.98px) {
   .hamburger .hamburger-toggle {
     visibility: visible;
     z-index: 99;
   }
 }
+
 @media (max-width: 1024.98px) {
   .hamburger .hamburger-toggle:focus {
     outline-width: 0;
   }
-}
-@media (max-width: 1024.98px) {
-  .hamburger .hamburger-toggle [class*=bar-] {
+  .hamburger .hamburger-toggle [class*="bar-"] {
     background: #ba8c63;
     display: block;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: 0.2s ease all;
     transition: 0.2s ease all;
     border-radius: 14px;
     height: 5px;
     width: 34px;
     margin-bottom: 6px;
   }
-}
-@media (max-width: 1024.98px) {
   .hamburger .hamburger-toggle .bar-bot {
     margin-bottom: 0;
   }
-}
-@media (max-width: 1024.98px) {
   .hamburger .opened .bar-top {
-    transform: rotate(45deg);
-    transform-origin: 2px 3px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 2px 3px;
+            transform-origin: 2px 3px;
   }
   .hamburger .opened .bar-mid {
     opacity: 0;
   }
   .hamburger .opened .bar-bot {
-    transform: rotate(-45deg);
-    transform-origin: 0px 3px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0px 3px;
+            transform-origin: 0px 3px;
   }
 }
 
 .loading--circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .loading--circle .loading--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .loading--circle .loading--box .percentage {
   color: white;
   font-size: medium;
   font-weight: 900;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
 }
+
 @media (max-width: 1024.98px) {
   .loading--circle .loading--box .percentage {
     color: black;
     font-size: medium;
     font-weight: 900;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
   }
 }
+
 .loading--circle .loading--full-hight {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   /* or absolute */
   top: 23.75%;
   left: 46.3%;
 }
+
 @media (max-width: 1024.98px) {
   .loading--circle .loading--full-hight {
     top: 25%;
     left: 45%;
   }
 }
+
 .loading--circle .loading--box::before {
   content: "";
   width: 70px;
   height: 70px;
   border: 10px solid #6c51a4;
   border-radius: 25%;
-  transform: rotate(0.16turn);
-  animation: loading--spin 1s ease infinite;
+  -webkit-transform: rotate(0.16turn);
+          transform: rotate(0.16turn);
+  -webkit-animation: loading--spin 1s ease infinite;
+          animation: loading--spin 1s ease infinite;
 }
+
 @media (max-width: 1024.98px) {
   .loading--circle .loading--box::before {
     width: 70px;
@@ -9103,9 +9315,12 @@ button {
   border: 10px solid #6c51a4;
   border-top-color: #2f435c;
   border-radius: 50%;
-  transform: rotate(1turn);
-  animation: loading--spin 0.3s ease infinite;
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
+  -webkit-animation: loading--spin 0.3s ease infinite;
+          animation: loading--spin 0.3s ease infinite;
 }
+
 @media (max-width: 1024.98px) {
   .loading--circle::after {
     width: 60px;
@@ -9115,12 +9330,15 @@ button {
 }
 
 .loading--full-hight {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   /* or absolute */
   top: 24.65%;
   left: 46.6%;
 }
+
 @media (max-width: 1024.98px) {
   .loading--full-hight {
     top: 25.5%;
@@ -9129,29 +9347,42 @@ button {
 }
 
 .nav .darkmode {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 0 6px 3vh;
   color: #3bc1b0;
 }
+
 .nav .darkmode__police {
   font-size: medium;
 }
+
 .nav .darkmode .toggle {
   display: none;
 }
+
 .nav .darkmode .toggleBtn {
   border: 3px solid #9e9191;
   border-radius: 16px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   cursor: pointer;
   display: block;
   width: 70px;
   height: 30px;
   outline: 0;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
 .nav .darkmode .toggleBtn::before {
   content: "";
   background-color: #9e9191;
@@ -9165,53 +9396,75 @@ button {
   margin: 1px 0 0 0;
   cursor: pointer;
 }
+
 .nav input:checked + .toggleBtn {
   background-color: #1e2a3a;
   border: 3px solid #6c51a4;
 }
+
 .nav input:checked + .toggleBtn::before {
   margin: 1px 0 0px -2px;
   background-color: #6c51a4;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
+
 .nav input:not(:checked) + .toggleBtn::before {
+  -webkit-transition: 0.4s;
   transition: 0.4s;
-  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
+
 .nav .sombre {
   color: black;
   margin: 0 5px 0px 0px;
 }
+
 .nav .claire {
   color: #b4b400;
   margin: 0 5px 0px 0px;
 }
 
 .nav-desktop .darkmode {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 0 6px 3vh;
   color: #3bc1b0;
 }
+
 .nav-desktop .darkmode__police {
   font-size: medium;
 }
+
 .nav-desktop .darkmode .toggle {
   display: none;
 }
+
 .nav-desktop .darkmode .toggleBtn {
   border: 3px solid #9e9191;
   border-radius: 16px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   cursor: pointer;
   display: block;
   width: 70px;
   height: 30px;
   outline: 0;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
 .nav-desktop .darkmode .toggleBtn::before {
   content: "";
   background-color: #9e9191;
@@ -9225,34 +9478,51 @@ button {
   margin: 1px 0 0 0;
   cursor: pointer;
 }
+
 .nav-desktop input:checked + .toggleBtn {
   background-color: #1e2a3a;
   border: 3px solid #6c51a4;
 }
+
 .nav-desktop input:checked + .toggleBtn::before {
   margin: 1px 0 0px -2px;
   background-color: #6c51a4;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
+
 .nav-desktop input:not(:checked) + .toggleBtn::before {
+  -webkit-transition: 0.4s;
   transition: 0.4s;
-  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
+
 .nav-desktop .sombre {
   color: black;
   margin: 0 5px 0px 0px;
 }
+
 .nav-desktop .claire {
   color: #b4b400;
   margin: 0 5px 0px 0px;
 }
 
 .container-portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 .container-portfolio .btn {
   border: none;
   font-size: inherit;
@@ -9260,24 +9530,31 @@ button {
   padding: 25px 60px;
   border-radius: 10rem;
 }
+
 .container-portfolio .btn:after {
   content: "";
   position: absolute;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 .container-portfolio .btn__element {
   background: #ba8c63;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   overflow: hidden;
 }
+
 .container-portfolio .btn__element:hover {
   background: #9e7653;
 }
+
 .container-portfolio .btn__element:active {
   top: 2px;
 }
+
 .container-portfolio .btn__element::before {
   position: absolute;
   height: 100%;
@@ -9287,9 +9564,11 @@ button {
   font-size: 140%;
   width: 60px;
 }
+
 .container-portfolio .btn__element--modifier {
   color: #fff;
 }
+
 .container-portfolio .btn .icon-portfolio {
   position: absolute;
   top: 27px;
@@ -9297,6 +9576,7 @@ button {
   left: 24px;
   right: 0;
 }
+
 .container-portfolio .btn .icon-cv {
   position: absolute;
   top: 27px;
@@ -9304,6 +9584,7 @@ button {
   left: 24px;
   right: 0;
 }
+
 .container-portfolio .btn .icon-arrow {
   position: absolute;
   top: 27px;
@@ -9311,6 +9592,7 @@ button {
   left: 31rem;
   right: 0;
 }
+
 .container-portfolio .btn .icon-download {
   position: absolute;
   top: 27px;
@@ -9330,184 +9612,295 @@ button {
   background-size: cover;
   background-attachment: scroll;
 }
+
 .container-header__background {
   width: 100%;
   height: auto;
   background-color: #00000094;
 }
+
 .container-header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: auto;
   width: 90%;
 }
+
 .container-header__info .container-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   height: auto !important;
 }
+
 .container-header__info .container-information__info {
   margin: 0px 0px 5vh 2px;
 }
+
 .container-header__info .container-information__info--modifier {
   color: #ffffff;
 }
+
 .container-header__info .container-information__info h1 {
   margin: 0 0 0 -5px;
   font-size: 40pt;
 }
+
 @media (max-width: 1024.98px) {
   .container-header__info .container-information__info h1 {
     font-size: 23.4pt;
   }
 }
+
 .container-header__info .container-information__info h2 {
   margin: -10px 0px 0px 0;
   font-size: 15pt;
   color: #3bc1b0;
 }
+
 @media (max-width: 1024.98px) {
   .container-header__info .container-information__info h2 {
     font-size: medium;
   }
 }
+
 .container-header__info .bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .container-header__info .bio__element {
   font-size: medium;
   padding: 0 0vw 3vw 0;
 }
+
 @media (max-width: 1024.98px) {
   .container-header__info .bio__element {
     font-size: small;
   }
 }
+
 .container-header__info .bio__element--modifier {
   color: #dadada;
 }
+
 .container-header__info .bio a {
   color: #569ded;
   text-decoration: none;
 }
+
 .container-header__info .bio .tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0 0 3.75vw 0;
 }
+
 .container-header__info .bio .tech--modifier {
   color: #f0f0f0;
 }
+
 .container-header__info .bio .container-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 @media (max-width: 1024.98px) {
   .container-header .container-overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 .container-header .container-overlay span {
   display: none;
 }
+
 @media (max-width: 1024.98px) {
   .container-header .container-overlay span {
     display: block;
     font-size: medium;
   }
 }
+
 .container-header .container-overlay .overlay {
   cursor: default;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 @media (max-width: 1024.98px) {
   .container-header .container-overlay .overlay {
     display: none;
   }
 }
+
 .container-header .container-overlay .overlay__text {
   font-size: medium;
 }
+
 .container-header .container-overlay .overlay__text--modifier {
   color: white;
 }
+
 .container-header .container-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .container-header .container-down .down__element--modifier {
   color: white;
 }
+
 .container-header .container-down__element {
   position: relative;
-  animation: UpDown 1s linear infinite;
+  -webkit-animation: UpDown 1s linear infinite;
+          animation: UpDown 1s linear infinite;
 }
+
 .container-header .container-down__element--modifier {
   color: white;
 }
+
 .container-header__nav {
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   background: transparent !important;
+  position: -webkit-sticky;
   position: sticky;
   width: 100%;
   z-index: 99;
   height: auto;
   margin: 3vh 0 3vh 0;
 }
+
 .container-header__nav .currentTime {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
+
 .container-header__nav .currentTime__element {
   font-size: small;
 }
+
 .container-header__nav .currentTime__element--modifier {
   color: white;
 }
+
 .container-header__nav .currentTime .heureCol {
   height: 100%;
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .container-header__nav .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   bottom: 10%;
 }
+
 .container-header__nav .top__logo {
   margin: -5px 0 0 0;
 }
-@media (max-width: ) {
+
+@media (max-width: null) {
   .container-header__nav .top__logo {
     height: auto;
     text-align: center;
   }
 }
+
 .container-header__nav .top--modifier {
   z-index: 99;
 }
+
 .container-header__nav .top a .logo-img {
   height: 100%;
   width: 100px;
   margin: 0px 0px -2px 0;
   z-index: 99;
 }
+
 .container-header__nav .top img {
   width: 20px;
   height: auto;
@@ -9517,6 +9910,7 @@ button {
 .nav {
   display: none;
 }
+
 @media (max-width: 1024.98px) {
   .nav .nav {
     display: block;
@@ -9524,16 +9918,24 @@ button {
     top: 17%;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav .nav {
     top: 23%;
   }
 }
+
 @media (max-width: 1024.98px) {
   .nav .nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     text-align: center;
     list-style: none;
     text-transform: uppercase;
@@ -9543,6 +9945,7 @@ button {
   .nav .nav ul .li:first-child {
     background-color: #2980b9;
     border-radius: 10%;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     position: relative;
   }
@@ -9590,7 +9993,8 @@ button {
     height: 100%;
     position: fixed;
     width: 100%;
-    animation: nav--open 1s ease-in-out 0s 1 normal forwards;
+    -webkit-animation: nav--open 1s ease-in-out 0s 1 normal forwards;
+            animation: nav--open 1s ease-in-out 0s 1 normal forwards;
   }
   .nav-open .nav {
     display: block;
@@ -9598,16 +10002,24 @@ button {
     top: 17%;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav-open .nav {
     top: 23%;
   }
 }
+
 @media (max-width: 1024.98px) {
   .nav-open .nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     text-align: center;
     list-style: none;
     text-transform: uppercase;
@@ -9617,6 +10029,7 @@ button {
   .nav-open .nav ul .li:first-child {
     background-color: #2980b9;
     border-radius: 10%;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     position: relative;
   }
@@ -9655,6 +10068,7 @@ button {
     margin: 0 5px 2px 0px;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 1024.98px) {
   .nav-open ul li {
     width: 100%;
@@ -9662,11 +10076,13 @@ button {
     margin: 0 25.4vh 0 -1.9vh;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav-open ul li {
     margin: 0 0px 0 -10px;
   }
 }
+
 @media (max-width: 1024.98px) {
   .nav-open img {
     width: 6%;
@@ -9674,6 +10090,7 @@ button {
     margin: 0px 6px -5px 0px;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 1024.98px) {
   .nav-open img {
     margin: 0px 6px -3px 0px;
@@ -9687,7 +10104,8 @@ button {
     height: 100%;
     position: fixed;
     width: 100%;
-    animation: nav--close 1s ease-in-out 0s 1 normal forwards;
+    -webkit-animation: nav--close 1s ease-in-out 0s 1 normal forwards;
+            animation: nav--close 1s ease-in-out 0s 1 normal forwards;
   }
   .nav-close .nav {
     display: block;
@@ -9695,16 +10113,24 @@ button {
     top: 17%;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav-close .nav {
     top: 23%;
   }
 }
+
 @media (max-width: 1024.98px) {
   .nav-close .nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     text-align: center;
     list-style: none;
     text-transform: uppercase;
@@ -9714,6 +10140,7 @@ button {
   .nav-close .nav ul .li:first-child {
     background-color: #2980b9;
     border-radius: 10%;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     position: relative;
   }
@@ -9752,6 +10179,7 @@ button {
     margin: 0 5px 2px 0px;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 1024.98px) {
   .nav-close ul li {
     width: 100%;
@@ -9759,11 +10187,13 @@ button {
     margin: 0 23vh 0 0vh;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav-close ul li {
     margin: 0 0px 0 0px;
   }
 }
+
 @media (max-width: 1024.98px) {
   .nav-close img {
     width: 6%;
@@ -9771,6 +10201,7 @@ button {
     margin: 0px 6px -5px 0px;
   }
 }
+
 @media (max-width: 1024.98px) and (max-width: 1024.98px) {
   .nav-close img {
     margin: 0px 6px -3px 0px;
@@ -9783,47 +10214,62 @@ button {
     height: 100%;
     position: fixed;
     width: 100%;
-    animation: menu 1.9s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal forwards;
+    -webkit-animation: menu 1.9s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal forwards;
+            animation: menu 1.9s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal forwards;
   }
 }
 
 .nav-desktop {
   display: block;
 }
+
 @media (max-width: 1024.98px) {
   .nav-desktop {
     display: none;
   }
 }
+
 .nav-desktop ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
   text-transform: uppercase;
   font-size: initial;
   font-weight: inherit;
 }
+
 .nav-desktop ul .icon {
   margin: 0 5px 2px 0px;
 }
+
 .nav-desktop ul .li:first-child {
   background-color: #2980b9;
-  border-radius: 1rem;
+  border-radius: 10%;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
   opacity: 0.7;
 }
+
 .nav-desktop ul .li:first-child:active {
   top: 2px;
 }
+
 .nav-desktop ul .li:first-child:hover {
   background-color: #236d9e;
 }
+
 .nav-desktop ul .a {
   background-color: #34495e;
   border-radius: 10%;
 }
+
 .nav-desktop ul li {
   cursor: pointer;
   padding: 15px;
@@ -9832,42 +10278,53 @@ button {
   font-stretch: extra-expanded;
   font-weight: inherit;
 }
+
 .nav-desktop ul li .vl {
   border-left: 6px solid green;
   height: 10px;
 }
+
 .nav-desktop ul li:last-child {
   border-bottom: 0;
   color: white;
 }
+
 .nav-desktop ul li:nth-last-child(2) {
   border-bottom: 0;
   background-color: #34495e;
-  border-radius: 1rem;
+  border-radius: 10%;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
   opacity: 0.8;
 }
+
 .nav-desktop ul li:nth-last-child(2):hover {
   background-color: #2c3e50;
 }
+
 .nav-desktop ul li:nth-last-child(2):active {
   top: 2px;
 }
+
 .nav-desktop ul li:nth-last-child(4) {
   border-bottom: 0;
 }
+
 .nav-desktop ul li .link {
   color: #3bc1b0;
   text-decoration: none;
 }
+
 .nav-desktop ul li .link--active {
   color: white;
 }
+
 .nav-desktop ul a {
   text-decoration: none;
   color: #3bc1b0;
 }
+
 .nav-desktop .nav__link--active {
   color: white;
 }
@@ -9879,41 +10336,44 @@ button {
 .reseaux-sociaux {
   width: 100%;
   height: auto;
-  margin: -6vh 0px 5vh 0;
+  margin: -5vh 0px 5vh 0;
 }
+
 .reseaux-sociaux ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
+
 .reseaux-sociaux ul li {
-  margin: 12px 15px 0px 0px;
+  margin: 0px 15px 0px 0px;
 }
+
 .reseaux-sociaux ul a {
   background-color: #ba8c63;
   color: white;
   padding: 5px 15px;
   display: inline-block;
-  border-radius: 1rem;
-  text-decoration: none;
+  border-radius: 10%;
 }
+
 @media (max-width: 1024.98px) {
   .reseaux-sociaux ul a {
     padding: 0px 10px;
   }
 }
-.reseaux-sociaux ul a span {
-  margin: 0 8px 0 14px;
-}
-@media (max-width: 1024.98px) {
-  .reseaux-sociaux ul a span {
-    margin: 0px 2px 0px 9px;
-  }
-}
+
 .reseaux-sociaux ul a:hover {
   background-color: #9e7653;
 }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

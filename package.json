@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -27,5 +29,6 @@
     "flag-icon-css": "^4.1.7",
     "font-awesome": "^4.7.0",
     "include-media": "^1.4.10"
-  }
+  },
+  "keywords": []
 }

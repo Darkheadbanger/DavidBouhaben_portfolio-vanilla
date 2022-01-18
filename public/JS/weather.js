@@ -1,3 +1,5 @@
+// import axios from "axios";
+
 window.addEventListener("load", () => {
   // weather api
   let keyWeather = "514eb68bb2feadc6869bbd11dde4c5c3";
@@ -5,48 +7,59 @@ window.addEventListener("load", () => {
   let lang = "fr";
 
   // ipApi
-  let proxyHeroku = "https://cors-anywhere.herokuapp.com/";
+  // let proxyHeroku = "https://cors-anywhere.herokuapp.com/";
   // let keyIp = "17cb1786a2a12deb27be3edee3b6936e";
   // let apiIp = `http://api.ipstack.com/check?access_key=${keyIp}`;
-
-  let apiIp = `https://www.cloudflare.com/cdn-cgi/trace`;
+  // let apiIp = `https://www.cloudflare.com/cdn-cgi/trace`;
+  let ipToken = 'e790195a026076';
+  let antiBot = /bot|spider/i;
+  let apiIp = `https://ipinfo.io/json?${ipToken}`;
   console.log(apiIp);
 
   function foundLocationByIp() {
-    axios(apiIp, {
-      mode: "cors",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          return Promise.reject(response);
-        } else {
-          return response.json();
-        }
-      })
-      .then((data) => {
-        console.log("Success");
-        console.log(data);
-      })
-      .catch((error) => {
-        if (typeof error.json === "function") {
-          error
-            .json()
-            .then((jsonError) => {
-              console.error("Json error from API openweathermap");
-              console.error(jsonError.message);
-            })
-            .catch((genericError) => {
-              console.log("Generic error from API");
-              console.error(genericError.message);
-            });
-        } else {
-          console.log("fetch error");
-          console.error(error.message);
-        }
-      });
+    // Filtrage des bots pour eviter qu'un bot abuse la limite de API
+    if (!navigator.userAgent.match(antiBot)) {
+      // Si c'est un bot, on ne fait rien
+      // On va voir le localStorage pour eviter de faire un appel à l'api a chaque fois
+      if (localStorage.getItem("userIp")) {
+        window.location.href = "/index?userIp" + localStorage.getItem("userIp");
+      } else {
+        fetch(apiIp, {
+          mode: "cors",
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
+        })
+          .then((response) => {
+            if (!response.ok) {
+              return Promise.reject(response);
+            } else {
+              return response.json();
+            }
+          })
+          .then((data) => {
+            console.log("Success");
+            console.log(data);
+          })
+          .catch((error) => {
+            if (typeof error.json === "function") {
+              error
+                .json()
+                .then((jsonError) => {
+                  console.error("Json error from API openweathermap");
+                  console.error(jsonError.message);
+                })
+                .catch((genericError) => {
+                  console.log("Generic error from API");
+                  console.error(genericError.message);
+                });
+            } else {
+              console.log("fetch error");
+              console.error(error.message);
+            }
+          });
+      }
+    }
   }
   foundLocationByIp();
 

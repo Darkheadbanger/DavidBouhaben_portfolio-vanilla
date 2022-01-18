@@ -75,7 +75,7 @@
 .reseaux-sociaux {
   width: 100%;
   height: auto;
-  margin: -5vh 0px 5vh 0;
+  margin: -6vh 0px 5vh 0;
   ul {
     list-style: none;
     display: flex;
@@ -83,16 +83,27 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     li {
-      margin: 0px 15px 0px 0px;
+      margin: 12px 15px 0px 0px;
+      // &:last-child,
+      // &:nth-last-child(2) {
+      //   border-radius: 10rem;
+      // }
     }
     a {
       background-color: $button-header;
       color: $colour-text;
       padding: 5px 15px;
       display: inline-block;
-      border-radius: 10%;
+      border-radius: 1rem;
+      text-decoration: none;
       @include media("dekstop") {
         padding: 0px 10px;
+      }
+      span {
+        margin: 0 8px 0 14px;
+        @include media("dekstop") {
+          margin: 0px 2px 0px 9px;
+        }
       }
       &:hover {
         background-color: $button-header-hover;
