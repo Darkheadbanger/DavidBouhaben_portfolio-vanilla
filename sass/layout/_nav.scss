@@ -10,6 +10,7 @@
     display: block;
     @include navOpenClose;
     @include nav;
+    z-index: 1;
     ul {
       li {
         @include media("dekstop") {

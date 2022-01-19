@@ -9590,6 +9590,7 @@ button {
     height: 100%;
     position: fixed;
     width: 100%;
+    z-index: 1;
     animation: nav--open 1s ease-in-out 0s 1 normal forwards;
   }
   .nav-open .nav {
