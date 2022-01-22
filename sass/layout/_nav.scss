@@ -7,7 +7,7 @@
 .nav-open {
   @include media("dekstop") {
     overflow: hidden;
-    display: block;
+    // display: block;
     @include navOpenClose;
     @include nav;
     z-index: 1;

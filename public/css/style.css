@@ -9566,12 +9566,11 @@ button {
   .nav .nav {
     display: block;
     position: absolute;
-    top: 17%;
   }
 }
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav .nav {
-    top: 23%;
+    top: 18%;
   }
 }
 @media (max-width: 1024.98px) {
@@ -9630,10 +9629,9 @@ button {
 @media (max-width: 1024.98px) {
   .nav-open {
     overflow: hidden;
-    display: block;
     background-color: #fffaf1;
-    height: 100%;
-    position: fixed;
+    height: 143%;
+    position: absolute;
     width: 100%;
     z-index: 1;
     animation: nav--open 1s ease-in-out 0s 1 normal forwards;
@@ -9641,12 +9639,11 @@ button {
   .nav-open .nav {
     display: block;
     position: absolute;
-    top: 17%;
   }
 }
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav-open .nav {
-    top: 23%;
+    top: 18%;
   }
 }
 @media (max-width: 1024.98px) {
@@ -9730,20 +9727,19 @@ button {
   .nav-close {
     display: block;
     background-color: #fffaf1;
-    height: 100%;
-    position: fixed;
+    height: 143%;
+    position: absolute;
     width: 100%;
     animation: nav--close 1s ease-in-out 0s 1 normal forwards;
   }
   .nav-close .nav {
     display: block;
     position: absolute;
-    top: 17%;
   }
 }
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
   .nav-close .nav {
-    top: 23%;
+    top: 18%;
   }
 }
 @media (max-width: 1024.98px) {
@@ -9826,8 +9822,8 @@ button {
 @media (max-width: 1024.98px) {
   .nav-animation {
     background-color: #fffaf1;
-    height: 100%;
-    position: fixed;
+    height: 143%;
+    position: absolute;
     width: 100%;
     animation: menu 1.9s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal forwards;
   }
