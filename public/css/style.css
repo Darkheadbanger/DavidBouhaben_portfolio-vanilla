@@ -9319,6 +9319,51 @@ button {
   right: 0;
 }
 
+.btn-list {
+  width: 100%;
+  height: auto;
+  margin: -6vh 0px 5vh 0;
+}
+.btn-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.btn-list ul li {
+  margin: 12px 15px 0px 0px;
+  text-transform: uppercase;
+}
+.btn-list ul li:active {
+  position: relative;
+  top: 2px;
+}
+.btn-list ul a {
+  background-color: #ba8c63;
+  color: white;
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+@media (max-width: 1024.98px) {
+  .btn-list ul a {
+    padding: 0px 10px;
+  }
+}
+.btn-list ul a span {
+  margin: 0 8px 0 14px;
+}
+@media (max-width: 1024.98px) {
+  .btn-list ul a span {
+    margin: 0px 2px 0px 9px;
+  }
+}
+.btn-list ul a:hover {
+  background-color: #9e7653;
+}
+
 .container-header {
   min-width: 100%;
   min-height: 100%;
@@ -9875,46 +9920,6 @@ button {
 
 .image {
   width: 6%;
-}
-
-.reseaux-sociaux {
-  width: 100%;
-  height: auto;
-  margin: -6vh 0px 5vh 0;
-}
-.reseaux-sociaux ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.reseaux-sociaux ul li {
-  margin: 12px 15px 0px 0px;
-}
-.reseaux-sociaux ul a {
-  background-color: #ba8c63;
-  color: white;
-  padding: 5px 15px;
-  display: inline-block;
-  border-radius: 1rem;
-  text-decoration: none;
-}
-@media (max-width: 1024.98px) {
-  .reseaux-sociaux ul a {
-    padding: 0px 10px;
-  }
-}
-.reseaux-sociaux ul a span {
-  margin: 0 8px 0 14px;
-}
-@media (max-width: 1024.98px) {
-  .reseaux-sociaux ul a span {
-    margin: 0px 2px 0px 9px;
-  }
-}
-.reseaux-sociaux ul a:hover {
-  background-color: #9e7653;
 }
 
 /*# sourceMappingURL=style.css.map */

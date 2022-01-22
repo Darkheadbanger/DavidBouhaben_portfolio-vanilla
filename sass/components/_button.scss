@@ -68,3 +68,45 @@
     }
   }
 }
+
+// Button avec reseaux sociaux et cv a telecharger
+.btn-list {
+  width: 100%;
+  height: auto;
+  margin: -6vh 0px 5vh 0;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    li {
+      margin: 12px 15px 0px 0px;
+      text-transform: uppercase;
+      &:active {
+        position: relative;
+        top: 2px;
+      }
+    }
+    a {
+      background-color: $button-header;
+      color: $colour-text;
+      padding: 5px 15px;
+      display: inline-block;
+      border-radius: 1rem;
+      text-decoration: none;
+      @include media("dekstop") {
+        padding: 0px 10px;
+      }
+      span {
+        margin: 0 8px 0 14px;
+        @include media("dekstop") {
+          margin: 0px 2px 0px 9px;
+        }
+      }
+      &:hover {
+        background-color: $button-header-hover;
+      }
+    }
+  }
+}

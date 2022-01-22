@@ -50,7 +50,7 @@ window.addEventListener("load", () => {
       `<span>${heure}:${minute}:${second} GMT+2</span>` +
       `<span> ${nomJour} ${jour} ${nomMois} ${annee}</span>`;
   }
-  // setInterval(clock, 1000);
+  setInterval(clock, 1000);
 
   clock();
 });

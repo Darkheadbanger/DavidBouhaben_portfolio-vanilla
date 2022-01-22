@@ -12,15 +12,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Helmet pour securiser les cookies
 app.use(helmet());
 
-app.use(
-  cors({
-    origin: "http://127.0.0.1:5500/",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
-    credentials: true,
-  })
-);
+app.use(cors());
+
+app.use((req, res, next) => {
+  //CORS (cross origine ressources sharing) pour éviter l'attaque cross-site request forgery (CSRF) et pour respecter la sécurité OWASP
+  //système de sécurité par défault pour bloqué les appelles HTTP de deux servers differents, mais on le désactive car on a 2 servers differents qui doivent pouvoir se communiquer
+  res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_ORIGIN); //
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  //d'ajouter les headers mentionnés aux requêtes envoyées vers notre API
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
+  );
+  //d'envoyer des requêtes avec les méthodes mentionnées ( GET ,POST , etc.).
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, PATCH, OPTIONS"
+  ); //CRUD (create, read, update, delete)
+  next();
+});
 
 app.get("/json?e790195a026076", (req, res) => {
   request(
