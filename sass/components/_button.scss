@@ -1,0 +1,112 @@
+.container-portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  .btn {
+    border: none;
+    font-size: inherit;
+    position: relative;
+    padding: 25px 60px;
+    border-radius: 10rem;
+    &:after {
+      content: "";
+      position: absolute;
+      transition: all 0.3s;
+    }
+    &__element {
+      background: $button-header;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      overflow: hidden;
+      &:hover {
+        background: $button-header-hover;
+      }
+      &:active {
+        top: 2px;
+      }
+      &::before {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        line-height: 3;
+        font-size: 140%;
+        width: 60px;
+      }
+      &--modifier {
+        color: #fff;
+      }
+    }
+    .icon-portfolio {
+      position: absolute;
+      top: 27px;
+      bottom: 0;
+      left: 24px;
+      right: 0;
+    }
+    .icon-cv {
+      position: absolute;
+      top: 27px;
+      bottom: 0;
+      left: 24px;
+      right: 0;
+    }
+    .icon-arrow {
+      position: absolute;
+      top: 27px;
+      bottom: 0;
+      left: 31rem;
+      right: 0;
+    }
+    .icon-download {
+      position: absolute;
+      top: 27px;
+      bottom: 0;
+      left: 27.5rem;
+      right: 0;
+    }
+  }
+}
+
+// Button avec reseaux sociaux et cv a telecharger
+.btn-list {
+  width: 100%;
+  height: auto;
+  margin: -6vh 0px 5vh 0;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    li {
+      margin: 12px 15px 0px 0px;
+      text-transform: uppercase;
+      &:active {
+        position: relative;
+        top: 2px;
+      }
+    }
+    a {
+      background-color: $button-header;
+      color: $colour-text;
+      padding: 5px 15px;
+      display: inline-block;
+      border-radius: 1rem;
+      text-decoration: none;
+      @include media("dekstop") {
+        padding: 0px 10px;
+      }
+      span {
+        margin: 0 8px 0 14px;
+        @include media("dekstop") {
+          margin: 0px 2px 0px 9px;
+        }
+      }
+      &:hover {
+        background-color: $button-header-hover;
+      }
+    }
+  }
+}

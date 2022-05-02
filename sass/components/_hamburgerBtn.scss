@@ -1,0 +1,17 @@
+.hamburger {
+  display: none;
+  @include media(dekstop) {
+    display: block;
+    padding: 0 0 15px 0;
+    .hamburger-toggle {
+      @include media("dekstop") {
+        visibility: visible;
+        z-index: 99;
+      }
+      @include hamburgerBtnFalse;
+    }
+    .opened {
+      @include hamburgerBtnTrue;
+    }
+  }
+}

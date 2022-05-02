@@ -1,0 +1,73 @@
+.loading--circle {
+  display: flex;
+  justify-content: center;
+
+  .loading--box {
+    display: flex;
+    justify-content: center;
+    .percentage {
+      color: white;
+      font-size: medium;
+      font-weight: 900;
+      align-items: center;
+      position: absolute;
+      @include media("dekstop") {
+        color: black;
+        font-size: medium;
+        font-weight: 900;
+        align-items: center;
+        position: fixed;
+      }
+    }
+  }
+  .loading--full-hight {
+    align-items: center;
+    position: fixed; /* or absolute */
+    top: 23.75%;
+    left: 46.3%;
+    @include media("dekstop") {
+      top: 25%;
+      left: 45%;
+    }
+  }
+  .loading--box::before {
+    content: "";
+    width: 70px;
+    height: 70px;
+    border: 10px solid #6c51a4;
+    //   border-top-color: #2f435c;
+    border-radius: 25%;
+    transform: rotate(0.16turn);
+    animation: loading--spin 1s ease infinite;
+    @include media("dekstop") {
+      width: 70px;
+      height: 70px;
+      border-radius: 25%;
+    }
+  }
+}
+.loading--circle::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border: 10px solid #6c51a4;
+  border-top-color: #2f435c;
+  border-radius: 50%;
+  transform: rotate(1turn);
+  animation: loading--spin 0.3s ease infinite;
+  @include media("dekstop") {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+}
+.loading--full-hight {
+  align-items: center;
+  position: fixed; /* or absolute */
+  top: 24.65%;
+  left: 46.6%;
+  @include media("dekstop") {
+    top: 25.5%;
+    left: 46.5%;
+  }
+}

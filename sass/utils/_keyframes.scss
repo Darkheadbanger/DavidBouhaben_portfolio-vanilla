@@ -1,0 +1,74 @@
+// Animation pour loading spinner
+@keyframes loading--spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+// Spinner se ferme
+@keyframes loading--exit {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+// Animation pour ballayage de nav pour ouvrir le nav
+@if (false) {
+  @keyframes nav--open {
+    100% {
+      left: 0;
+      z-index: 1;
+    }
+    0% {
+      left: 100%;
+      z-index: 1;
+    }
+  }
+} @else {
+  @keyframes nav--close {
+    100% {
+      left: 100%;
+      z-index: 1;
+    }
+    0% {
+      left: 0%;
+      z-index: 1;
+    }
+  }
+}
+
+// Animation pour ballayage de nav pour fermer le nav
+
+@keyframes menu {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: -20%;
+  }
+  75% {
+    left: 20%;
+  }
+  100% {
+    left: 2.5%;
+  }
+}
+
+// Animation down
+@keyframes UpDown {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: .5em;
+  }
+  100% {
+    bottom: 0;
+  }
+}

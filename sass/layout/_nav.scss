@@ -1,0 +1,74 @@
+.nav {
+  display: none;
+  @include media("dekstop") {
+    @include nav;
+  }
+}
+.nav-open {
+  @include media("dekstop") {
+    overflow: hidden;
+    // display: block;
+    @include navOpenClose;
+    @include nav;
+    z-index: 1;
+    ul {
+      li {
+        @include media("dekstop") {
+          width: 100%;
+          height: auto;
+          margin: 0 25.4vh 0 -1.9vh;
+        }
+        @include media("tablet") {
+          margin: 0 0px 0 -10px;
+        }
+      }
+    }
+    animation: nav--open 1s ease-in-out 0s 1 normal forwards;
+    @include drapeaulangue;
+  }
+}
+
+// animation: nav--close 1s ease-in-out 0s 1 normal forwards;
+
+.nav-close {
+  @include media("dekstop") {
+    display: block;
+    @include navOpenClose;
+    @include nav;
+    ul {
+      li {
+        @include media("dekstop") {
+          width: 100%;
+          height: auto;
+          margin: 0 23vh 0 0vh;
+        }
+        @include media("tablet") {
+          margin: 0 0px 0 0px;
+        }
+      }
+    }
+    animation: nav--close 1s ease-in-out 0s 1 normal forwards;
+    @include drapeaulangue;
+  }
+}
+.nav-animation {
+  @include media("dekstop") {
+    @include navOpenClose;
+    animation: menu 1.9s cubic-bezier(0.61, 0.74, 0.8, 0.65) 0s 1 normal
+      forwards;
+  }
+}
+
+.nav-desktop {
+  @include media("dekstop") {
+    display: none;
+  }
+  display: block;
+  @include nav-desktop; // .nav-desktop ul li
+}
+
+.image {
+  // dreapeau france nav
+  width: 6%;
+}
+// Nav IconList

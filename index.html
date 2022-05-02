@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,900i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/style.css.map" />
+    <!-- <script defer src="./Backend/app.js"></script> -->
+    <title>David Bouhaben ePortfolio</title>
+  </head>
+  <body class="bodyLight" id="bodyId">
+    <div class="loading--circle loading--full-hight">
+      <div class="loading--box loading--full-hight"></div>
+    </div>
+    <!-- Ici, le nav -->
+    <div id="navId" class="">
+      <nav id="nav" class="nav">
+        <ul>
+          <li class="li">
+            <a href="/about.html" class="link link--active"
+              ><i class="fas fa-home icon"></i>Accueil</a
+            >
+          </li>
+          <li class="li">
+            <a href="#profil" class="link"
+              ><i class="fas fa-user icon"></i>Profil</a
+            >
+          </li>
+          <li class="li">
+            <a href="#portfolio" class="link"
+              ><i class="fas fa-briefcase icon"></i>Portfolio</a
+            >
+          </li>
+          <li class="li">
+            <a href="#CV" class="link"
+              ><i class="fas fa-book-open icon"></i>CV</a
+            >
+          </li>
+          <li class="li">
+            <a href="#Contact" class="link"
+              ><i class="fas fa-phone icon"></i>Contact</a
+            >
+          </li>
+          <li class="li">
+            <a href="#Activité" class="link"
+              ><i class="fas fa-tasks icon"></i>Activité Récente</a
+            >
+          </li>
+          <li class="li">
+            <a href="#langue" class="link"
+              ><img
+                src="./public/image/Drapeau/France.png"
+                alt="France"
+              />Version Française</a
+            >
+          </li>
+          <li class="li">
+            <span class="darkmode">
+              <span id="darkmode-Text"
+                ><i class="far fa-lightbulb claire"></i>Mode claire</span
+              >
+              <input
+                type="checkbox"
+                name="darkmode"
+                class="toggle"
+                id="darkmode"
+              />
+              <label for="darkmode" class="toggleBtn"></label>
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Ici, Header -->
+    <header id="site-header" class="wrapper container-header">
+      <div class="container-header__background">
+        <div class="container-header__info">
+          <div class="container-header__nav">
+            <span id="date" class="heure heure--modifier"></span>
+            <div
+              id="currentTime"
+              class="currentTime currentTime__element currentTime__element--modifier"
+            ></div>
+            <div id="home" class="top top__logo">
+              <span class="top__logo--modifier">
+                <a href="/index.html"
+                  ><img
+                    class="logo-img"
+                    src="./public/image/Logo-david-bouhaben.png"
+                    alt="Logo David Bouhaben"
+                /></a>
+              </span>
+
+              <nav id="nav-desktop" class="nav-desktop">
+                <ul>
+                  <li class="li">
+                    <a href="/about.html" class="link link--active"
+                      ><i class="fas fa-home icon"></i>Accueil</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#profil" class="link"
+                      ><i class="fas fa-user icon"></i>Profil</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#portfolio" class="link"
+                      ><i class="fas fa-briefcase icon"></i>Portfolio</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#CV" class="link"
+                      ><i class="fas fa-book-open icon"></i>CV</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#Contact" class="link"
+                      ><i class="fas fa-phone icon"></i>Contact</a
+                    >
+                  </li>
+                  <li class="li">
+                    <a href="#Activité" class="link"
+                      ><i class="fas fa-tasks icon"></i>Activité Récente</a
+                    >
+                  </li>
+                  <!-- Langue, Anglais, Francais, Indonésien -->
+                  <li class="li">
+                    <a href="#langue" class="link"
+                      ><img
+                        src="./public/image/Drapeau/France.png"
+                        alt="France"
+                      />Version Française</a
+                    >
+                  </li>
+                  <span class="darkmode">
+                    <span id="darkmode-Text-pc"
+                      ><i class="far fa-lightbulb claire"></i>Mode claire</span
+                    >
+                    <input
+                      type="checkbox"
+                      name="darkmode-pc"
+                      class="toggle"
+                      id="darkmode-pc"
+                    />
+                    <label for="darkmode-pc" class="toggleBtn"></label>
+                  </span>
+                </ul>
+              </nav>
+              <div class="hamburger">
+                <button class="hamburger-toggle">
+                  <span class="bar-top"></span>
+                  <span class="bar-mid"></span>
+                  <span class="bar-bot"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Gif stopped programmatically -->
+          <div id="homepage">
+            <div>
+              <div class="container-information">
+                <!-- <img src="./public/image/CV.png" alt="Logo CV David Bouhaben"/> -->
+                <div
+                  class="container-information__info container-information__info--modifier"
+                >
+                  <h1>David Bouhaben</h1>
+                  <h2>Développeur web/Front-End</h2>
+                </div>
+              </div>
+              <div class="btn-list">
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="https://github.com/Darkheadbanger" title="Github"
+                        ><i class="fab fa-github"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/david-bouhaben-904806b4/"
+                        title="Linkedin"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://twitter.com/Davidbouhaben1"
+                        title="Twitter"
+                        ><i class="fab fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-briefcase icon-portfolio"></i
+                        ><span>Voir le portfolio</span>
+                        <i class="fas fa-arrow-down icon-arrow"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="./public/CV/CV_Bouhaben_David.pdf"
+                        title="Twitter"
+                      >
+                        <i class="fas fa-file icon-cv"></i
+                        ><span>Télécharger CV</span>
+                        <i class="fas fa-download icon-download"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="bio">
+                <p class="bio__element bio__element--modifier">
+                  Je suis à la recherche d'un contrat en alternance qui me
+                  permettrait d’acquérir de nouvelles compétences dans le
+                  développement web (côté Front-End, Back-end ou FullStack) à
+                  partir de Janvier 2022. <br />
+                  Vous pouvez regarder ma
+                  <a href="https://paper.li/e-1598349115"
+                    >curation de contenu ici</a
+                  >. Voulez-vous savoir plus sur moi ? Vous pouvez consulter
+                  montravail sur
+                  <a href="https://github.com/Darkheadbanger">Github</a> et
+                  vouspouvez télécharger mon
+                  <a
+                    href="/public/CV/CV_Bouhaben_David.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    >CV ici</a
+                  >
+                </p>
+
+                <div class="tech tech--modifier">
+                  <div class="container-overlay">
+                    <i class="fas fa-laptop-code fa-2x"></i>
+                    <span>Front End</span>
+                    <span class="overlay overlay__text overlay__text--modifier"
+                      ><p>Front End</p>
+                    </span>
+                  </div>
+
+                  <div class="container-overlay">
+                    <i class="fas fa-server fa-2x"></i>
+                    <span>Back End</span>
+                    <span class="overlay overlay__text overlay__text--modifier"
+                      ><p>Back End</p></span
+                    >
+                  </div>
+
+                  <div class="container-overlay">
+                    <i class="fas fa-mobile-alt fa-2x"></i>
+                    <span>Web Mobile</span>
+                    <span class="overlay overlay__text overlay__text--modifier"
+                      ><p>Web Mobile</p></span
+                    >
+                  </div>
+
+                  <div class="container-overlay">
+                    <i class="fas fa-brush fa-2x"></i>
+                    <span>Web Design</span>
+                    <span class="overlay overlay__text overlay__text--modifier"
+                      ><p>Web Design</p></span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="container-down container-down__element container-down__element--modifier"
+                >
+                  <a
+                    href=""
+                    class="down down__element down__element--modifier"
+                    href="#about"
+                  >
+                    <i class="fas fa-angle-double-down fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- "We are the <strong>music makers,</strong>
+         <br/>
+         and we are the <strong>dreamers of dreams."</strong> -->
+    <!-- </section> -->
+    <!-- <main class="container"> -->
+    <!-- <div class="proj-grid"> -->
+    <!-- <section class="proj-prev" onclick="location.href='/project.html'">
+         <div class="proj-prev__image">
+           <img
+             src="/public/img/photography_1280w.jpg"
+             srcset="
+               /public/img/photography_3000w.jpg 3000w,
+               /public/img/photography_1920w.jpg 1920w,
+               /public/img/photography_0864w.jpg  864w,
+               /public/img/photography_0640w.jpg  640w,
+               /public/img/photography_0640w.jpg  640w,
+               /public/img/photography_0420w.jpg  420w
+             "
+             alt="project title goes here"
+           />
+         </div>
+         <h1 class="proj-prev__heading">Project Title</h1>
+         <p class="proj-prev__byline">project keywords would go here</p>
+         </section>
+         <section class="proj-prev">
+         <div class="proj-prev__image">
+           <img
+             src="/public/img/photography_1280w.jpg"
+             srcset="
+               /public/img/photography_3000w.jpg 3000w,
+               /public/img/photography_1920w.jpg 1920w,
+               /public/img/photography_0864w.jpg  864w,
+               /public/img/photography_0640w.jpg  640w,
+               /public/img/photography_0640w.jpg  640w,
+               /public/img/photography_0420w.jpg  420w
+             "
+             alt="project title goes here"
+           />
+         </div>
+         <h1 class="proj-prev__heading">Project Title</h1>
+         <p class="proj-prev__byline">project keywords would go here</p>
+         </section>
+         <section class="proj-prev">
+         <div class="proj-prev__image">
+           <img
+             src="/public/img/photography_1280w.jpg"
+             srcset="
+               /public/img/photography_3000w.jpg 3000w,
+               /public/img/photography_1920w.jpg 1920w,
+               /public/img/photography_0864w.jpg  864w,
+               /public/img/photography_0640w.jpg  640w,
+               /public/img/photography_0640w.jpg  640w,
+               /public/img/photography_0420w.jpg  420w
+             "
+             alt="project title goes here"
+           />
+         </div>
+         <h1 class="proj-prev__heading">Project Title</h1>
+         <p class="proj-prev__byline">project keywords would go here</p>
+         </section>
+         <section class="proj-prev">
+         <div class="proj-prev__image">
+           <img
+             src="/public/img/photography_1280w.jpg"
+             srcset="
+               /public/img/photography_3000w.jpg 3000w,
+               /public/img/photography_1920w.jpg 1920w,
+               /public/img/photography_0864w.jpg  864w,
+               /public/img/photography_0640w.jpg  640w,
+               /public/img/photography_0640w.jpg  640w,
+               /public/img/photography_0420w.jpg  420w
+             "
+             alt="project title goes here"
+           />
+         </div>
+         <h1 class="proj-prev__heading">Project Title</h1>
+         <p class="proj-prev__byline">project keywords would go here</p>
+         </section> -->
+    <!-- </div> -->
+    <!-- </main> -->
+    <!-- </div> -->
+    <script defer src="./public/JS/loading.js"></script>
+    <script defer src="./public/JS/hamburger.js"></script>
+    <script defer src="./public/JS/nav.js"></script>
+    <script defer src="./public/JS/font-awesome-JS/all.js"></script>
+    <script defer src="./public/JS/font-awesome-JS/all.min.js"></script>
+    <script defer src="./public/JS/darkmode.js"></script>
+    <script defer src="./public/JS/darkmodePc.js"></script>
+    <script defer src="./public/JS/tooltip.js"></script>
+    <script defer src="./public/JS/date.js"></script>
+    <script defer src="./public/JS/weather.js"></script>
+    <script defer src="./public/JS/toggle.js"></script>
+  </body>
+</html>

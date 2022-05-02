@@ -1,0 +1,28 @@
+@import "./utils/breakpoints";
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./utils/keyframes";
+
+@import "./vendors/scss/fontawesome.scss";
+@import "./vendors/scss/brands.scss";
+@import "./vendors/scss/regular.scss";
+@import "./vendors/scss/solid.scss";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/hamburgerBtn";
+@import "./components/loading";
+@import "./components//darkmodeinput";
+@import "./components/button";
+
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
+
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";

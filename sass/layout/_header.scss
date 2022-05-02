@@ -1,0 +1,200 @@
+.container-header {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background: url(../../public/image/coffee-header.jpg);
+  // position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  // border: 1px solid red;
+  &__background {
+    width: 100%;
+    // height: 95vh;
+    height: auto;
+    background-color: #00000094;
+  }
+  &__info {
+    // border: 1px solid violet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto; // Pour centrer
+    width: 90%;
+    .container-information {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      height: auto !important;
+      // min-height: 11.5vh;
+      &__info {
+        margin: 0px 0px 5vh 2px;
+        &--modifier {
+          color: #ffffff;
+        }
+        h1 {
+          margin: 0 0 0 -5px;
+          font-size: 40pt;
+          @include media(dekstop) {
+            font-size: 23.4pt;
+          }
+        }
+        h2 {
+          margin: -10px 0px 0px 0;
+          font-size: 15pt;
+          color: $colour-text-light;
+          @include media(dekstop) {
+            font-size: medium;
+          }
+        }
+      }
+    }
+    .bio {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      &__element {
+        @include media(dekstop) {
+          font-size: small;
+        }
+        font-size: medium;
+        padding: 0 0vw 3vw 0;
+        &--modifier {
+          color: #dadada;
+        }
+      }
+      a {
+        color: #569ded;
+        text-decoration: none;
+      }
+      .tech {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 0 3.75vw 0;
+        &--modifier {
+          color: #f0f0f0;
+        }
+      }
+      .container-overlay {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  // Pour overlay fontawesome tech
+  .container-overlay {
+    @include media("dekstop") {
+      display: flex;
+      flex-direction: column;
+    }
+    span {
+      display: none;
+      @include media("dekstop") {
+        display: block;
+        font-size: medium;
+      }
+    }
+    .overlay {
+      @include media(dekstop) {
+        display: none;
+      }
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      &__text {
+        font-size: medium;
+        &--modifier {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .container-down {
+    display: flex;
+    // position: absolute;
+    justify-content: center;
+    .down {
+      &__element {
+        &--modifier {
+          color: white;
+        }
+      }
+    }
+    &__element {
+      position: relative;
+      animation: UpDown 1s linear infinite;
+      &--modifier {
+        color: white;
+      }
+    }
+  }
+
+  &__nav {
+    box-shadow: none !important;
+    background: transparent !important;
+    position: sticky; //ou fixed, Pour pouvoir faire suivre le nav quand on scroll vers le bas
+    width: 100%;
+    z-index: 99;
+    height: auto;
+    margin: 3vh 0 3vh 0;
+    .currentTime {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      // color: white;
+      &__element {
+        font-size: small;
+        &--modifier {
+          color: white;
+        }
+      }
+      .heureCol {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      bottom: 10%;
+      // border: 1px solid blue;
+      &__logo {
+        @include media("desktop") {
+          height: auto;
+          text-align: center;
+        }
+        margin: -5px 0 0 0;
+      }
+      &--modifier {
+        z-index: 99;
+      }
+      a {
+        .logo-img {
+          height: 100%;
+          width: 100px;
+          margin: 0px 0px -2px 0;
+          z-index: 99;
+        }
+      }
+      img {
+        width: 20px; // Pour le drapeau, je ne comprend pas
+        height: auto;
+        margin: 0px 5px -4px 0px;
+      }
+    }
+  }
+}

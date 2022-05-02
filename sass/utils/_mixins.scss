@@ -1,0 +1,354 @@
+@mixin heading-shadow(
+  $colour: lightness-shift($colour-primary),
+  $offset: $heading-shadow-size
+) {
+  text-shadow: $offset $offset $colour;
+}
+
+@mixin border($colour: $colour-primary) {
+  border: 0.1rem solid $colour;
+}
+
+@mixin img-ratio {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  & img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin hamburgerBtnFalse {
+  position: relative;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  &:focus {
+    outline-width: 0;
+  }
+  [class*="bar-"] {
+    background: #ba8c63; //#3bc1b0
+    display: block;
+    transform: rotate(0deg);
+    transition: 0.2s ease all;
+    border-radius: 14px;
+    height: 5px;
+    width: 34px;
+    margin-bottom: 6px;
+  }
+  .bar-bot {
+    margin-bottom: 0;
+  }
+}
+
+@mixin hamburgerBtnTrue {
+  .bar-top {
+    transform: rotate(45deg);
+    transform-origin: 2px 3px;
+  }
+  .bar-mid {
+    opacity: 0;
+  }
+  .bar-bot {
+    transform: rotate(-45deg);
+    transform-origin: 0px 3px;
+  }
+}
+
+// Breakpoints here
+
+@mixin media($breapoints) {
+  @each $breakpoint in $breapoints {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// Lamp animation
+
+@mixin lamp {
+  .sombre {
+    color: black;
+    margin: 0 5px 0px 0px;
+  }
+  .claire {
+    color: #b4b400;
+    margin: 0 5px 0px 0px;
+  }
+}
+
+// Le nav pour open et close
+
+@mixin navOpenClose {
+  background-color: #fffaf1;
+  height: 143%;
+  position: absolute;
+  width: 100%;
+}
+
+@mixin vertical { 
+  .vl {
+    border-left: 6px solid green;
+    height: 10px;
+  }
+}
+
+@mixin nav {
+  .nav {
+    display: block;
+    position: absolute;
+    @include media("tablet") {
+      top: 18%;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      text-align: center;
+      list-style: none;
+      text-transform: uppercase;
+      font-size: initial;
+      font-weight: inherit;
+      .li {
+        &:first-child {
+          background-color: $coulour-bacground-link-active;
+          border-radius: 10%;
+          transition: all 0.3s;
+          position: relative;
+          &:active {
+            top: 4px;
+          }
+        }
+      }
+      li {
+        border-bottom: 1px solid #7a7a7a;
+        padding: 20px;
+        list-style: none;
+        cursor: pointer;
+        overflow: hidden;
+        &:last-child {
+          border-bottom: 0;
+        }
+        &:nth-last-child(2) {
+          border-bottom: 0;
+          background-color: $coulour-lang;
+          border-radius: 5%;
+        }
+        &:nth-last-child(3) {
+          border-bottom: 0;
+        }
+        &:nth-last-child(4) {
+          border-bottom: 1px solid #7a7a7a;
+        }
+        .link {
+          color: $colour-text-light;
+          text-decoration: none;
+          &--active {
+            color: $colour-text;
+          }
+        }
+      }
+      .icon {
+        margin: 0 5px 2px 0px;
+      }
+    }
+  }
+}
+
+@mixin nav-desktop {
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: initial;
+    font-weight: inherit;
+    .icon {
+      margin: 0 5px 2px 0px;
+    }
+    .li {
+      &:first-child {
+        background-color: $coulour-bacground-link-active;
+        border-radius: 1rem;
+        transition: all 0.3s;
+        position: relative;
+        opacity: 0.7;
+        &:active {
+          top: 2px;
+        }
+        &:hover {
+          background-color: $coulour-bacground-link-active-hover;
+        }
+      }
+    }
+    .a {
+      // Version desktop
+      background-color: $coulour-lang;
+      border-radius: 10%;
+    }
+    li {
+      cursor: pointer;
+      padding: 15px;
+      text-transform: uppercase;
+      font-size: initial;
+      font-stretch: extra-expanded;
+      font-weight: inherit;
+
+      @include vertical;
+
+      &:last-child {
+        border-bottom: 0;
+        color: $colour-text;
+      }
+      &:nth-last-child(2) {
+        border-bottom: 0;
+        background-color: $coulour-lang;
+        border-radius: 1rem;
+        transition: all 0.3s;
+        position: relative;
+        opacity: 0.8;
+        &:hover {
+          background-color: $coulour-lang-hover;
+        }
+        &:active {
+          top: 2px;
+        }
+      }
+      &:nth-last-child(4) {
+        border-bottom: 0;
+      }
+      .link {
+        color: $colour-text-light;
+        text-decoration: none;
+        &--active {
+          color: $colour-text;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $colour-text-light;
+    }
+  }
+  .nav__link {
+    &--active {
+      color: white;
+    }
+  }
+}
+
+@mixin drapeaulangue {
+  // display: block;
+  img {
+    width: 6%;
+    height: auto;
+    margin: 0px 6px -5px 0px;
+    @include media("dekstop") {
+      margin: 0px 6px -3px 0px;
+    }
+  }
+}
+
+@mixin overlayTech {
+  // Pour overlay fontawesome tech
+  &:hover {
+    .overlay {
+      opacity: 0.9;
+    }
+  }
+  .overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background-color: white;
+    border-radius: 25%;
+    cursor: default;
+    &__text {
+      opacity: 1;
+      position: absolute;
+      right: 0;
+      font-size: medium;
+      overflow-y: visible;
+      left: 15%;
+      &--modifier {
+        color: black;
+      }
+    }
+  }
+}
+
+@mixin darkmode {
+  .darkmode {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 0 6px 3vh;
+    color: $colour-text-light;
+
+    &__police {
+      font-size: medium;
+    }
+    .toggle {
+      display: none;
+    }
+    .toggleBtn {
+      border: 3px solid #9e9191;
+      border-radius: 16px;
+      align-self: center;
+      cursor: pointer;
+      display: block;
+      width: 70px;
+      height: 30px;
+      outline: 0;
+      transition: 0.4s;
+      &::before {
+        content: "";
+        background-color: #9e9191;
+        left: 1%;
+        border-radius: 16px;
+        width: 50%;
+        overflow: hidden;
+        height: 93%;
+        position: relative;
+        display: block;
+        margin: 1px 0 0 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@mixin darkmode-animation {
+  input {
+    // animation: darkmode-active 0.4s ease-in-out 0s 1 normal forwards;
+    &:checked + .toggleBtn {
+      background-color: #1e2a3a;
+      border: 3px solid #6c51a4;
+    }
+    &:checked + .toggleBtn {
+      &::before {
+        // animation: darkmode-active 0.4s ease-in-out 0s 1 normal forwards;
+        margin: 1px 0 0px -2px;
+        background-color: #6c51a4;
+        transition: 0.4s;
+        transform: translateX(100%);
+      }
+    }
+
+    &:not(:checked) + .toggleBtn {
+      &::before {
+        // animation: darkmode-desactive 0.4s ease-in-out 0s 1 normal forwards;
+        transition: 0.4s;
+        transform: translateX(0%);
+      }
+    }
+  }
+}
