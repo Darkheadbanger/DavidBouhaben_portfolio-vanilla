@@ -4,7 +4,7 @@
   "description": "My ePortofolio website",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed",
     "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
     "dev": "parcel index.html",
     "build": "parcel build index.html"
@@ -21,14 +21,15 @@
   },
   "homepage": "https://github.com/Darkheadbanger/DavidBouhaben_personal_project_CV_ePortofolio#readme",
   "devDependencies": {
-    "rewire": "^5.0.0"
+    "rewire": "^7.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "axios": "^0.24.0",
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "axios": "^1.6.7",
     "flag-icon-css": "^4.1.7",
     "font-awesome": "^4.7.0",
-    "include-media": "^1.4.10"
+    "include-media": "^2.0.0",
+    "npm-check-updates": "^16.14.14"
   },
   "keywords": []
 }

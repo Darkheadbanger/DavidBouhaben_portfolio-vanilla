@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-  // Array pournom de jours
+  // Array pour nom de jours
   function clock() {
     let date = new Date();
     console.log(date);

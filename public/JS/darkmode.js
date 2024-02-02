@@ -1,5 +1,5 @@
 (() => {
-  window.addEventListener("load", (event) => {
+  window.addEventListener("load", () => {
     let checkbox = document.getElementById("darkmode");
     let bodyId = document.getElementById("bodyId");
     let darkmodeTextSombre = document.getElementById("darkmode-Text");
@@ -7,10 +7,10 @@
     if (localStorage.getItem("darkmode") === null) {
       localStorage.setItem("darkmode", false);
     }
+    // Checker si le localstorage existe ou non, si il existe alors baclground noir
     setInterval(() => {
       checkDarkmode();
     });
-    // Checker si le localstorage existe ou non, si il existe alors baclground noir
     function checkDarkmode() {
       if (checkbox.checked) {
         localStorage.setItem("darkmode", true);

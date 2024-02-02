@@ -88,12 +88,16 @@
 
 @mixin navOpenClose {
   background-color: #fffaf1;
-  height: 143%;
-  position: absolute;
   width: 100%;
+  height: 100%;
+  position: fixed;
+  @include media("dekstop") {
+    height: 143%;
+    position: absolute;
+  }
 }
 
-@mixin vertical { 
+@mixin vertical {
   .vl {
     border-left: 6px solid green;
     height: 10px;
